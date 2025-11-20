@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хвостатый доктор</title>
+    <link rel="icon" href="img/icons/pawIconColored.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+
+</head>
+
+<body>
+
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
+
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+
+                <button id="burger" class="md:hidden p-2 text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+
+                        <button id="theme-toggle" class="p-2 ">
+                            <img src="img/icons/sunIcon.png" class="h-10 w-auto">
+                        </button>
+
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Врачи
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="doctorsStartInfo" class="pt-20 pb-10 bg-white">
+        <div class="container mx-auto px-4 max-w-[1100px]">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <div>
+                    <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">
+                        Наши специалисты
+                    </h2>
+                    <p class="m-4 text-sm sm:text-base">
+                        Широкий профиль специализации позволит получить консультативную помощь по направлениям:
+                        Хирургия, вакцинация, диагностика, стоматология, кастрация и стерелизация, офтальмология,
+                        терапи, первичный прием и дневной статиционар. </p>
+                    <p class="m-4 text-sm sm:text-base">
+                        В клинике "Хвостатый доктор" Вы получите лучшее отношение к Вам и Вашим питомцам! </p>
+
+                    <p class="m-4 text-sm sm:text-base"> В штате нашей клиники высококвалифицированные специалисты с
+                        большим опытом работы.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="https://p0.zoon.ru/preview/0AwurfWZpGf-JGOeQgZLKw/630x384x85/1/6/3/original_5d81ccc210de9a0dd9502e27_60af0beb119ee.jpg"
+                        class="w-full max-h-[350px] object-contain border rounded-xl">
+                </div>
+            </div>
+    </section>
+
+
+
+    <section id="doctorsCards" class="pt-20 pb-10 bg-white">
+        <div class="container mx-auto px-4 max-w-[1100px]">
+             <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">  Наши врачи-ветеринары </h2>
+            <div id="doctorsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- template will be here -->
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+ <template id="doctorCardTemplate">
+        <div class="doctor-card bg-[#0097b2]/10 rounded-xl p-6 flex flex-col">
+            <img class="doctor-photo w-full h-48 object-cover rounded-md mb-4" />
+            <h2 class="doctor-name text-xl font-bold text-[#0097b2] mb-2"></h2>
+            <p><span class="font-semibold">Специализация:</span> <span class="doctor-specialty"></span></p>
+            <p><span class="font-semibold">Опыт:</span> <span class="doctor-experience"></span></p>
+            <p><span class="font-semibold">Образование:</span> <span class="doctor-education"></span></p>
+            <p><span class="font-semibold">График:</span> <span class="doctor-schedule"></span></p>
+            <p class="doctor-bio mt-2 text-sm text-gray-600"></p>
+        </div>
+    </template>
+    
+
+    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
+                    </a>
+
+                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p class="text-gray-800">vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="scrips/viewDoctors.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
+</body>
+
+</html>
