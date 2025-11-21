@@ -19,8 +19,18 @@ export class Doctor {
     return data;
   }
 
+  static async updateDoctor(id, updatedData) {
+    const { data, error } = await supabase
+      .from("doctors")
+      .update(updatedData)
+      .eq("id", id);
+    return data;
+  }
+
   static async deleteDoctor(id) {
-    
-    const { error } = await supabase.from("doctors").delete().eq("id", id);
+    const { error } = await supabase
+    .from("doctors")
+    .delete()
+    .eq("id", id);
   }
 }

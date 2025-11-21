@@ -1,8 +1,9 @@
 import { supabase } from "./dbInfo.js";
-import { Doctor } from "./Doctor.js";
+import { Doctor } from "./doctor.js";
 
 class DoctorForm {
   constructor() {
+    this.form = document.getElementById("doctorForm");
 
     const submitBtn =document.getElementById("submitBtn")
     submitBtn.addEventListener("click", (e) => this.handleSubmit(e));

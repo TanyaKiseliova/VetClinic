@@ -97,16 +97,24 @@
 
     <section id="doctorsCards" class="pt-20 pb-10 bg-white">
         <div class="container mx-auto px-4 max-w-[1100px]">
-             <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">  Наши врачи-ветеринары </h2>
+            <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6"> Наши
+                врачи-ветеринары </h2>
+            <img class="w-full" id="loading-gif" src="./img/dogLoading.gif" alt="Загрузка...">
+
+
+            <a href="./addDoctor.html"
+                class="flex justify-center items-center w-24 p-2  m-2 bg-[#0097b2] text-white  rounded text-sm">
+                Добавить
+            </a>
             <div id="doctorsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- template will be here -->
+                <!-- template will be here -->
             </div>
         </div>
         </div>
     </section>
 
 
- <template id="doctorCardTemplate">
+    <template id="doctorCardTemplate">
         <div class="doctor-card bg-[#0097b2]/10 rounded-xl p-6 flex flex-col">
             <img class="doctor-photo w-full h-48 object-cover rounded-md mb-4" />
             <h2 class="doctor-name text-xl font-bold text-[#0097b2] mb-2"></h2>
@@ -115,9 +123,18 @@
             <p><span class="font-semibold">Образование:</span> <span class="doctor-education"></span></p>
             <p><span class="font-semibold">График:</span> <span class="doctor-schedule"></span></p>
             <p class="doctor-bio mt-2 text-sm text-gray-600"></p>
-        </div>
+
+
+            <div class="flex justify-center space-x-2 mt-4">
+                <button class="edit-btn bg-[#0097b2] text-white px-3 py-1 rounded text-sm">
+                    Редактировать
+                </button>
+                <button class="delete-btn bg-red-500 text-white px-3 py-1 rounded text-sm">
+                    Удалить
+                </button>
+            </div>
     </template>
-    
+
 
     <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
         <div class="container mx-auto">
@@ -172,7 +189,7 @@
     </footer>
 
 
-    <script type="module" src="scrips/viewDoctors.js"></script>
+    <script type="module" src="scrips/viewUpdateDeleteDoctors.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> -->
