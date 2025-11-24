@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Хвостатый доктор</title>
+    <link rel="icon" href="img/icons/pawIconColored.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
+
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+
+                <button id="burger" class="md:hidden p-2 text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+
+                        <button id="theme-toggle" class="p-2 ">
+                            <img src="img/icons/sunIcon.png" class="h-10 w-auto">
+                        </button>
+
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Врачи
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="pt-24 pb-16">
+        <div class="container mx-auto px-4 max-w-[1100px]">
+
+            <div class="mb-8">
+                <a href="/doctorsPage.html" class="text-[#0097b2] hover:text-[#007a94] font-semibold">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Назад к списку врачей
+                </a>
+            </div>
+
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] mb-4">Добавить нового врача</h1>
+                <p class="text-lg text-gray-600">Заполните информацию о новом специалисте</p>
+            </div>
+
+
+            <div class="bg-[#0097b2]/20 rounded-2xl p-8">
+                <form id="doctorForm" class="space-y-6">
+
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-semibold">
+                            <i class="fa-solid fa-user-doctor text-[#0097b2] mr-2"></i>
+                            ФИО врача *
+                        </label>
+                        <input type="text" id="doctorName" placeholder="Иванов Иван Иванович"
+                            class="w-full p-3 border border-gray-300 rounded-lg " required>
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">
+                                <i class="fas fa-stethoscope text-[#0097b2] mr-2"></i>
+                                Специализация *
+                            </label>
+                            <input type="text" id="doctorSpecialty" placeholder="Хирург"
+                                class="w-full p-3 border border-gray-300 rounded-lg " required>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">
+                                <i class="fas fa-briefcase text-[#0097b2] mr-2"></i>
+                                Опыт работы *
+                            </label>
+                            <input type="text" id="doctorExperience" placeholder="5 лет"
+                                class="w-full p-3 border border-gray-300 rounded-lg" required>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-semibold">
+                            <i class="fas fa-graduation-cap text-[#0097b2] mr-2"></i>
+                            Образование *
+                        </label>
+                        <input type="text" id="doctorEducation" placeholder="БГМУ, хирургия животных"
+                            class="w-full p-3 border border-gray-300 rounded-lg " required>
+                    </div>
+
+
+                    <div>
+                        <label class="block text-gray-700 mb-2 font-semibold">
+                            <i class="fas fa-file-alt text-[#0097b2] mr-2"></i>
+                            Биография и достижения
+                        </label>
+                        <textarea id="doctorBio" placeholder="Опыт работы, специализация, достижения, награды"
+                            class="w-full p-3 border border-gray-300 rounded-lg " rows="4"></textarea>
+
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">
+                                <i class="fas fa-camera text-[#0097b2] mr-2"></i>
+                                Фото врача
+                            </label>
+                            <p><input id="doctorPhoto" class="w-full p-3 border border-gray-300 rounded-lg" type="file"
+                                accept="image/*" name="pic"></p>
+                        </div>
+
+                        <div className="mb-3">
+
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-semibold">
+                                    <i class="fas fa-clock text-[#0097b2] mr-2"></i>
+                                    График работы
+                                </label>
+                                <input type="text" id="doctorSchedule" placeholder="Пн-Пт: 9:00-18:00"
+                                    class="w-full p-3 border border-gray-300 rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <button type="submit" id="submitBtn"
+                            class=" submitBtn  bg-[#0097b2] text-white py-3 rounded-lg hover:bg-[#007a94] font-semibold ">
+                            Добавить врача
+                        </button>
+                        <button type="button" id="clearBtn"
+                            class=" flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 font-semibold">
+                            Очистить форму
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
+                    </a>
+
+                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p class="text-gray-800">vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./scrips/doctors/addDoctor.js"></script>
+
+</body>
+
+</html>
