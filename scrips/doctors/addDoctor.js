@@ -1,4 +1,4 @@
-import { supabase } from "./dbInfo.js";
+import { supabase } from "../dbInfo.js";
 import { Doctor } from "./doctor.js";
 
 class DoctorForm {

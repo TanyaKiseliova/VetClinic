@@ -1,4 +1,4 @@
-import { supabase } from "./dbInfo.js";
+import { supabase } from "../dbInfo.js";
 
 export class Doctor {
   static async addDoctor(doctorData) {
@@ -6,6 +6,11 @@ export class Doctor {
       .from("doctors")
       .insert([doctorData])
       .select();
+
+      if (error) {
+      console.error("Ошибка добавления:", error.message);
+      throw error;
+    }
 
     return data;
   }
@@ -16,6 +21,11 @@ export class Doctor {
       .select("*")
       .order("name");
 
+      if (error) {
+      console.error("Ошибка :", error.message);
+      throw error;
+    }
+
     return data;
   }
 
@@ -24,6 +34,11 @@ export class Doctor {
       .from("doctors")
       .update(updatedData)
       .eq("id", id);
+
+      if (error) {
+      console.error("Ошибка :", error.message);
+      throw error;
+    }
     return data;
   }
 
@@ -32,5 +47,10 @@ export class Doctor {
     .from("doctors")
     .delete()
     .eq("id", id);
+
+    if (error) {
+      console.error("Ошибка :", error.message);
+      throw error;
+    }
   }
 }
