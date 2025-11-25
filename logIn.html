@@ -56,134 +56,65 @@
 
                         </div>
 
-                        
-                    </div>
-                </div>
 
-                <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                    </div>
+
+                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
                         Вход
                     </a>
+                </div>
             </div>
         </div>
     </header>
 
+    <section class="min-h-[calc(100vh-200px)] flex flex-col  pt-24">
 
-    <section class="pt-24 pb-16">
-        <div class="container mx-auto px-4 max-w-[1100px]">
-
-            <div class="mb-8">
-                <a href="/doctorsPage.html" class="text-[#0097b2] hover:text-[#007a94] font-semibold">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Назад к списку врачей
-                </a>
-            </div>
-
+        <div class="container flex-grow mx-auto px-4 max-w-[800px]">
 
             <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] mb-4">Добавить нового врача</h1>
-                <p class="text-lg text-gray-600">Заполните информацию о новом специалисте</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] mb-4">Войти</h1>
+                <p class="text-lg text-gray-600">Для работника</p>
+                <p class="text-lg text-gray-600">Это даст возможность работать с врачами (добавление, редактирование,
+                    удаление)</p>
             </div>
-
 
             <div class="bg-[#0097b2]/20 rounded-2xl p-8">
                 <form id="doctorForm" class="space-y-6">
 
                     <div>
                         <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fa-solid fa-user-doctor text-[#0097b2] mr-2"></i>
-                            ФИО врача *
+                            <i class="fa-regular fa-envelope text-[#0097b2] mr-2"></i>
+                            Email *
                         </label>
-                        <input type="text" id="doctorName" placeholder="Иванов Иван Иванович"
-                            class="w-full p-3 border border-gray-300 rounded-lg " required>
+                        <input type="text" id="email" class="w-full p-3 border border-gray-300 rounded-lg " required>
                     </div>
 
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-stethoscope text-[#0097b2] mr-2"></i>
-                                Специализация *
-                            </label>
-                            <input type="text" id="doctorSpecialty" placeholder="Хирург"
-                                class="w-full p-3 border border-gray-300 rounded-lg " required>
-                        </div>
-
-                        <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-briefcase text-[#0097b2] mr-2"></i>
-                                Опыт работы *
-                            </label>
-                            <input type="text" id="doctorExperience" placeholder="5 лет"
-                                class="w-full p-3 border border-gray-300 rounded-lg" required>
-                        </div>
-                    </div>
-
-
-                    <div>
+                    <div class="relative">
                         <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fas fa-graduation-cap text-[#0097b2] mr-2"></i>
-                            Образование *
+                            <i class="fa-solid fa-lock text-[#0097b2] mr-2"></i>
+                            Пароль *
                         </label>
-                        <input type="text" id="doctorEducation" placeholder="БГМУ, хирургия животных"
-                            class="w-full p-3 border border-gray-300 rounded-lg " required>
-                    </div>
+                        <input type="text" id="password" class="w-full p-3 border border-gray-300 rounded-lg " required>
 
-
-                    <div>
-                        <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fas fa-file-alt text-[#0097b2] mr-2"></i>
-                            Биография и достижения
-                        </label>
-                        <textarea id="doctorBio" placeholder="Опыт работы, специализация, достижения, награды"
-                            class="w-full p-3 border border-gray-300 rounded-lg " rows="4"></textarea>
-
-                    </div>
-
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-camera text-[#0097b2] mr-2"></i>
-                                Фото врача
-                            </label>
-                            <p><input id="doctorPhoto" class="w-full p-3 border border-gray-300 rounded-lg" type="file"
-                                accept="image/*" name="pic"></p>
-                        </div>
-
-                        <div className="mb-3">
-
-                            <div>
-                                <label class="block text-gray-700 mb-2 font-semibold">
-                                    <i class="fas fa-clock text-[#0097b2] mr-2"></i>
-                                    График работы
-                                </label>
-                                <input type="text" id="doctorSchedule" placeholder="Пн-Пт: 9:00-18:00"
-                                    class="w-full p-3 border border-gray-300 rounded-lg">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <button type="submit" id="submitBtn"
-                            class=" submitBtn  bg-[#0097b2] text-white py-3 rounded-lg hover:bg-[#007a94] font-semibold ">
-                            Добавить врача
+                        <button class="absolute right-5 top-1/2" id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
                         </button>
-                        <button type="button" id="clearBtn"
-                            class=" flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 font-semibold">
-                            Очистить форму
+                    </div>
+
+                    <div class="flex justify-center items-center ">
+                        <button type="submit" id="logInBtn"
+                            class=" logInBtn p-8 bg-[#0097b2] text-white py-3 rounded-lg hover:bg-[#007a94] font-semibold ">
+                            Войти
                         </button>
 
                     </div>
                 </form>
             </div>
 
-
-
         </div>
     </section>
 
-    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+    <footer class=" min-h-[200px]  bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
         <div class="container mx-auto">
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
@@ -236,8 +167,8 @@
     </footer>
 
 
-    <script type="module" src="./scrips/doctors/addDoctor.js"></script>
-     <script type="module" src="./scrips/auth.js"></script>
+    <script type="module" src="./scrips/logIn.js"></script>
+      <script type="module" src="./scrips/auth.js"></script>
 
 </body>
 

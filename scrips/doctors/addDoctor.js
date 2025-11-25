@@ -1,6 +1,15 @@
 import { supabase } from "../dbInfo.js";
 import { Doctor } from "./doctor.js";
 
+
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (!currentUser || (currentUser.role !== "admin" )) {
+  alert("Нет доступа к добавлению врачей.");
+  window.location.href = "../login.html";
+}
+
+
 class DoctorForm {
   constructor() {
     this.form = document.getElementById("doctorForm");

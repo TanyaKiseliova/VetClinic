@@ -23,6 +23,20 @@ const editDoctorBio = document.getElementById("editDoctorBio");
 let doctorToDelete = null;
 let allDoctors = [];
 
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  const addLink = document.querySelector("a[href='./addDoctor.html']");
+  if (!currentUser) {
+    addLink.style.display = "none";
+  }
+
+// if (currentUser) {
+//   document.querySelectorAll(".edit-btn, .delete-btn").forEach(btn => {
+//     btn.style.display = "inline-block";
+//   });
+// }
+
+
 async function loadDoctors() {
   container.innerHTML = "";
   loadingGif.style.display = "block";
@@ -70,6 +84,12 @@ function showDoctors(doctors) {
     education.textContent = doctor.education;
     schedule.textContent = doctor.schedule || "пока нет данных";
     bio.textContent = doctor.bio || "";
+
+    if (!currentUser) {
+    clone.querySelectorAll(".edit-btn, .delete-btn").forEach(btn => {
+      btn.style.display = "none";
+    });
+  }
 
     editBtn.addEventListener("click", () => openEditModal(doctor));
     deleteBtn.addEventListener("click", () => openDeleteModal(doctor));
