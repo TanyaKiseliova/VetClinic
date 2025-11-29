@@ -5,98 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>servises</title>
     <link rel="stylesheet" href="styles/style-servises.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-logo"><img src="img/icons/pawIcon.png"/></div>
-        <div class="header-menu">
-            <div class="header-menu_theme"><img class="theme-icon" src="img/icons/sunIcon.png"/></div>
-            <div class="header-menu_main">Главная</div>
-            <div class="header-menu_other">О нас</div>
-            <div class="header-menu_servises">Услуги</div>
-            <div class="header-menu_doctors">Врачи</div>
-        </div>
-        <div class="header-nav">
-            <div class="header-nav_reg">Регистрация</div>
-            <div class="header-nav_entrance">Вход</div>
-        </div>
-    </div>
-    <div class="main">
-        <div class="main-content">
-            <div class="main-content_box">
-                <proc>Вакцианция</proc>
-                <img class="procedure-img"src="img/Procedures/vaccination.jpg"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Диагностика</proc>
-                <img class="procedure-img"src="img/Procedures/diagnostics.jpg"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Стоматология</proc>
-                <img class="procedure-img"src="img/Procedures/dentistry.jpeg"/>
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="main-content_box">
-                <proc>Хирургия</proc>
-                <img class="procedure-img"src="img/Procedures/surgery.jpg"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Кастрация и стерилизация</proc>
-                <img class="procedure-img"src="img/Procedures/castration.jpeg"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Офтальмология</proc>
-                <img class="procedure-img"src="img/Procedures/ophthalmology.jpg"/>
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="main-content_box">
-                <proc>Терапия</proc>
-                <img class="procedure-img"src="img/Procedures/therapy.jpg"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Первичный прием</proc>
-                <img class="procedure-img"src="img/Procedures/appointment.webp"/>
-            </div>
-            <div class="main-content_box">
-                <proc>Дневной стационар</proc>
-                <img class="procedure-img"src="img/Procedures/hospital.jpg"/>
+     <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
+
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+
+                <button id="burger" class="md:hidden p-2 text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+
+                        <button id="theme-toggle" class="p-2 ">
+                            <img src="img/icons/sunIcon.png" class="h-10 w-auto">
+                        </button>
+
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Врачи
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="footer-logo">
-            <img class="logo-icon" src="img/icons/pawIcon.png"/>
-            <text>Лечим Ваших домашних питомцев, </br> делаем их жизнь лучше и здоровее</text>
+    </header>
+    
+    <section  class="pt-8 pb-10">
+        <div class="container mx-auto px-4 max-w-[1400px]">
+            <div class="main">
+                <div class="main-content">
+                    <div class="main-content_box">
+                        <proc>Вакцианция</proc>
+                        <img class="procedure-img"src="img/Procedures/vaccination.jpg"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Диагностика</proc>
+                        <img class="procedure-img"src="img/Procedures/diagnostics.jpg"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Стоматология</proc>
+                        <img class="procedure-img"src="img/Procedures/dentistry.jpeg"/>
+                    </div>
+                    </div>
+                    <div class="main-content">
+                    <div class="main-content_box">
+                        <proc>Хирургия</proc>
+                        <img class="procedure-img"src="img/Procedures/surgery.jpg"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Кастрация и стерилизация</proc>
+                        <img class="procedure-img"src="img/Procedures/castration.jpeg"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Офтальмология</proc>
+                        <img class="procedure-img"src="img/Procedures/ophthalmology.jpg"/>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="main-content_box">
+                        <proc>Терапия</proc>
+                        <img class="procedure-img"src="img/Procedures/therapy.jpg"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Первичный прием</proc>
+                        <img class="procedure-img"src="img/Procedures/appointment.webp"/>
+                    </div>
+                    <div class="main-content_box">
+                        <proc>Дневной стационар</proc>
+                        <img class="procedure-img"src="img/Procedures/hospital.jpg"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-contacts">
-            <h> Контакты: </h>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>ул. Немига, д. 40 г. Минск</text>
-            </div>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>+375 (29) 123-45-67</text>
-            </div>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>vetPet@gmail.com</text>
+    </section>
+    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
+                    </a>
+
+                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p class="text-gray-800">vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4"><h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+
+                </div>
             </div>
         </div>
-        <div class="footer-other">
-            <h>Режим работы:</h>
-            <div class="footer-other_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>Пн–Вс: 10:00-20:00</text>
-            </div>
-            <h>Реквизиты:</h>
-            <div class="footer-other_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>BY12 3456 7890 1234 5678 9012</text>
-            </div>
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
