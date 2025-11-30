@@ -3,15 +3,6 @@ function toggleTheme() {
     html.classList.toggle('dark')
     const isDark = html.classList.contains('dark')
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
-    updateThemeIcon(isDark)
-}
-
-function updateThemeIcon(isDark) {
-    const themeIcons = document.querySelectorAll('.theme-icon')
-    themeIcons.forEach(icon => {
-        icon.classList.toggle('hidden', !isDark)
-        icon.classList.toggle('block', isDark)
-    })
 }
 
 function loadTheme() {
@@ -20,10 +11,8 @@ function loadTheme() {
     
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
         document.documentElement.classList.add('dark')
-        updateThemeIcon(true)
     } else {
         document.documentElement.classList.remove('dark')
-        updateThemeIcon(false)
     }
 }
 
@@ -35,7 +24,7 @@ function initBurgerMenu() {
             if (mobileMenu) {
                 mobileMenu.classList.toggle('hidden')
             }
-        });
+        })
     }
 }
 
