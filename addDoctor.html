@@ -27,6 +27,15 @@
                 </button>
 
 
+                 <nav id="mobileMenu"
+                    class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] hidden flex flex-col items-center p-4 space-y-4">
+                    <a href="/homePage.html" class="block">Главная</a>
+                    <a href="/aboutPage.html" class="block">О нас</a>
+                    <a href="/servicesPage.html" class="block">Услуги</a>
+                    <a href="/doctorsPage.html" class="block">Врачи</a>
+                    <a href="/logIn.html" id="authBtnMobile" class="block">Вход</a>
+                </nav>
+
                 <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
                     <div class="flex items-center space-x-6 mx-auto">
@@ -237,7 +246,8 @@
 
 
     <script type="module" src="./scrips/doctors/addDoctor.js"></script>
-     <script type="module" src="./scrips/auth.js"></script>
+     <script type="module" src="./scrips/auth.js"></script>     
+      <script type="module" src="./scrips/burger.js"></script>
 
 </body>
 

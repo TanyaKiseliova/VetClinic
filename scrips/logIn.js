@@ -43,4 +43,20 @@ document.getElementById("logInBtn").addEventListener("click", async (e) => {
   }
 });
 
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password-input');
+    const eyeIcon = document.querySelector('.password-control i');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+    }
+}
 
+
+document.querySelector('.password-control').addEventListener('click', togglePasswordVisibility);
