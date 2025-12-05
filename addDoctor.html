@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -26,15 +26,16 @@
                     <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
                 </button>
 
-
-                 <nav id="mobileMenu"
+                <nav id="mobileMenu"
                     class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] hidden flex flex-col items-center p-4 space-y-4">
                     <a href="/homePage.html" class="block">Главная</a>
                     <a href="/aboutPage.html" class="block">О нас</a>
                     <a href="/servicesPage.html" class="block">Услуги</a>
                     <a href="/doctorsPage.html" class="block">Врачи</a>
+                    <a href="/clinicMap.html" class="block">Интерактивная карта</a>
                     <a href="/logIn.html" id="authBtnMobile" class="block">Вход</a>
                 </nav>
+
 
                 <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
@@ -63,15 +64,19 @@
                                 Врачи
                             </a>
 
+
+                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Карта</a>
+
                         </div>
 
-                        
-                    </div>
-                </div>
 
-                <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                    </div>
+
+                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
                         Вход
                     </a>
+                </div>
             </div>
         </div>
     </header>

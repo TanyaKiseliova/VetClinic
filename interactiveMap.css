@@ -1,0 +1,9 @@
+.room {
+  fill: #e6fffa;
+  stroke: #0097b2;
+}
+
+.room.active {
+  fill: #a086c9;
+  stroke: #6a2f85;
+}

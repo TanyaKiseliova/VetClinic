@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хвостатый доктор</title>
+    <link rel="icon" href="img/icons/pawIconColored.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="interactiveMap.css">
+</head>
+
+<body>
+
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
+
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+                <button id="burger" class="md:hidden p-2 text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+                <nav id="mobileMenu"
+                    class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] hidden flex flex-col items-center p-4 space-y-4">
+                    <a href="/homePage.html" class="block">Главная</a>
+                    <a href="/aboutPage.html" class="block">О нас</a>
+                    <a href="/servicesPage.html" class="block">Услуги</a>
+                    <a href="/doctorsPage.html" class="block">Врачи</a>
+                    <a href="/clinicMap.html" class="block">Интерактивная карта</a>
+                    <a href="/logIn.html" id="authBtnMobile" class="block">Вход</a>
+                </nav>
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+
+                        <button id="theme-toggle" class="p-2 ">
+                            <img src="img/icons/sunIcon.png" class="h-10 w-auto">
+                        </button>
+
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Врачи
+                            </a>
+
+
+                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                                Карта</a>
+
+                        </div>
+
+                    </div>
+
+                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                        Вход
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="interactiveMap" class="pt-20 pb-10 bg-white">
+        <div class="container mx-auto px-4 max-w-[1100px]">
+            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">Виртуальная
+                интерактивная карта клиники</h2>
+
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class=" relative w-full md:w-3/5 flex justify-center items-center">
+
+
+                    <svg id="mapSvg" viewBox="0 0 480 535" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto  border border-solid border-black">
+                        <rect x="50" y="50" width="100" height="80" fill="#e6fffa" stroke="#0097b2" />
+                        <g transform="scale(1.2)">
+                            <g>
+                                <title>background</title>
+                                <rect fill="#fff" id="canvas_background" height="479" width="402" y="-1" x="-1" />
+                                <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%"
+                                    id="canvasGrid">
+                                    <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%"
+                                        width="100%" />
+                                </g>
+                            </g>
+                            <g>
+                                <title>Layer 1</title>
+                                <rect class="room" data-name="Кабинет первичного осмотра"
+                                    data-photo="./img/interactiveMap/teraphevt.jpg"
+                                    data-desc="Кабинет, где наши специалисты проведут осморт питомца и определят, к какому специалисту нужно обратиться при необходимости"
+                                    data-icon="fa-solid fa-user-doctor" stroke="#000" id="svg_4" height="110"
+                                    width="85.98206" y="45.14634" x="266.6799" fill-opacity="null" stroke-opacity="null"
+                                    stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Комната персонала"
+                                    data-photo="./img/interactiveMap/staff.jpg"
+                                    data-desc="Место для отдыха нашей команды" data-icon="fa-solid fa-users"
+                                    stroke="#000" id="svg_16" height="59.54279" width="93.81306" y="45.39267"
+                                    x="129.456" fill-opacity="null" stroke-opacity="null" stroke-width="1.5"
+                                    fill="#fff" />
+
+                                <rect class="room" data-name="Гардероб" data-photo="./img/interactiveMap/cloth.jpg"
+                                    data-desc="Местодля вашей верхней одежды иличных вещей" data-icon="fa-solid fa-vest"
+                                    stroke="#000" id="svg_17" height="109.71321" width="43.62288" y="44.93605"
+                                    x="223.04204" fill-opacity="null" stroke-opacity="null" stroke-width="1.5"
+                                    fill="#fff" />
+
+                                <rect class="room" data-name="Туалет" data-photo="./img/interactiveMap/wc.jpg"
+                                    data-desc="Кроме посещения уборной здесь также можно воспользоваться лапомойкой для вашего питомца при необходимости"
+                                    data-icon="fa-solid fa-restroom" stroke="#000" id="svg_18" height="47.19533"
+                                    width="61.51741" y="105.71737" x="129.94837" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Регистратура и касса"
+                                    data-photo="./img/interactiveMap/register.jpg"
+                                    data-desc="Место записи на прием и его отмены, на все вопросы с радостью ответят наши администраторы. После приема здесь происходит оплата и получения последующих рекомендаций"
+                                    data-icon="fa-solid fa-cash-register" stroke="#000" id="svg_19" height="107.2223"
+                                    width="71.20093" y="45.46057" x="58.1056" fill-opacity="null" stroke-opacity="null"
+                                    stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Стоматология" data-photo="./img/interactiveMap/tooth.jpg"
+                                    data-desc=" Кабинет, где проводят диагностику, профилактику и лечение заболеваний ротовой полости у животных, включая удаление зубного камня, пломбирование, лечение кариеса и пульпита, а также хирургические операции при травмах челюсти или тяжелых заболеваниях. Ветеринарные стоматологи занимаются чисткой зубов, лечением гингивита, пародонтита, а также исправлением прикуса. "
+                                    data-icon="fa-solid fa-tooth" stroke="#000" id="svg_20" height="111.02581"
+                                    width="131.76166" y="312.12106" x="144.69622" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Стерелизационная"
+                                    data-photo="./img/interactiveMap/noVirus.jpg"
+                                    data-desc="Все инструменты тут обработываются, обеззараживаются и становяться стерильными для новых манипуляций и операций"
+                                    data-icon="fa-solid fa-virus-covid-slash" stroke="#000" id="svg_21"
+                                    height="44.34719" width="75.92774" y="155.06673" x="276.55667" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Операционная"
+                                    data-photo="./img/interactiveMap/surgery.jpg"
+                                    data-desc="Наши опытные хирурги тут проволят различные операции. Стерелмзацию и кастрацию животных, операции на сердце и многое другое. После чего отправляются в реабилитацию, где за ними тщательно ухаживают."
+                                    data-icon="fa-solid fa-user-nurse" stroke="#000" id="svg_22" height="135.42811"
+                                    width="76.32871" y="197.48055" x="276.59048" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Палата реабилитации"
+                                    data-photo="./img/interactiveMap/afterSurgery.jpg"
+                                    data-desc="Тут наблюдают за питомцами в тяжелом состоянии, после сложных операций, питомцы тут отходят от наркоза и готовятся снова к активной жизни и встречи с хозяином"
+                                    data-icon="fa-solid fa-bed-pulse" stroke="#000" id="svg_23" height="91.16526"
+                                    width="74.79828" y="332.37842" x="277.68613" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Кабинет УЗИ и рентгена"
+                                    data-photo="./img/interactiveMap/uzu.jpg"
+                                    data-desc="Рентген для животных помогает диагностировать широкий спектр патологий, в их числе:
+                                    Повреждения костей: трещины и переломы; Повреждения суставов; Наличие опухолей и новообразований; Заболевания сердца и сосудов; Заболевания желудка и кишечника: язвы, непроходимость, дивертикулы, грыжа; Ультразвуковое исследование животных — это полностью безопасная ветеринарная процедура, использовать которую в терапии можно не один раз. Для УЗИ не потребуется какой-либо специальной анестезии или введения успокоительных препаратов. Процедура может проводиться даже при лечении излишне активных питомцев."
+                                    data-icon="fa-solid fa-x-ray" stroke="#000" id="svg_24" height="64.39643"
+                                    width="86.68685" y="211.14954" x="58.37398" fill-opacity="null"
+                                    stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Процедурно-прививочный кабинет"
+                                    data-photo="./img/interactiveMap/ukol.png" data-desc=" Тут животным проводят вакцинацию для защиты от инфекционных заболеваний, а также выдают ветеринарные паспорта. Животному делают прививку от различных заболеваний. Это могут быть комплексные вакцины, защищающие от нескольких инфекций сразу, или моновалентные (от одного заболевания), например, от бешенства. Вакцины вводят с помощью инъекции, которые создают иммунитет к конкретным заболеваниям, содержат ослабленные или инактивированные возбудители.
+                                    Также можно провести чипирование." data-icon="fa-solid fa-syringe" stroke="#000"
+                                    id="svg_25" height="74.70414" width="86.68685" y="276.21503" x="58.37398"
+                                    fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Лаборатория" data-photo="./img/interactiveMap/lab.jpg"
+                                    data-desc="Место, где проводятся медицинские исследования биологических материалов (крови, мочи, тканей и т.д.) для оценки состояния здоровья, выявления заболеваний и контроля эффективности лечения. У нас используют современное оборудование и методы для точной диагностики, помогая врачам ставить диагноз и назначать соответствующую терапию. "
+                                    data-icon="fa-solid fa-flask" stroke="#000" id="svg_26" height="71.59849"
+                                    width="87.6001" y="351.45021" x="57.89742" fill-opacity="null" stroke-opacity="null"
+                                    stroke-width="1.5" fill="#fff" />
+
+                                <path class="room" data-name="Холл" data-photo="./img/interactiveMap/holl.jpg"
+                                    data-desc="Коридор для прохода к разным комнатам, тут есть мета для ожидания, однако, для более комфортного времяпреповождения рекомендуем ожидать в зале ожидания, находящемус тут по центру"
+                                    data-icon="fa-solid fa-house-medical" stroke="#000" id="svg_30"
+                                    d="m57.33915,153.84752c0,0 2.62162,58.43796 2.33033,58.00185c0.29129,0.4361 86.36757,-0.4361 86.07629,-0.87221c-0.14564,-1.74442 -0.58259,100.74005 -0.58259,100.74005c0,3.48883 135.01306,1.30832 134.72178,0.87223c0.29128,0.43609 0.29128,-157.43362 0,-157.86972c0.29128,0.4361 -56.94727,0 -57.23855,-0.4361c0.29128,0.4361 -0.14565,-48.84367 -0.43693,-49.27977c0.29128,0.4361 -29.85726,0.87221 -30.14855,0.4361c0.29129,0.4361 -0.58259,48.84367 -0.58259,48.84367c0,0 -134.13918,-0.4361 -134.13918,-0.4361z"
+                                    fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff" />
+
+                                <rect class="room" data-name="Зал ожидания"
+                                    data-desc="Место для комфортного ожидания приема с вашим питомцем, а таже место ожидания дл вас, пока питомец находится на процедухаз или операции. Удобные кресла, новые журналы и вкусный кофе помогут вам скоратать время"
+                                    data-icon="fa-solid fa-couch" data-photo="./img/interactiveMap/waitingRoom.jpg"
+                                    stroke-dasharray="2,2" id="svg_33" height="109.13242" width="66.66667" y="183.27718"
+                                    x="181.18943" fill-opacity="null" stroke-opacity="null" stroke-width="1.5"
+                                    stroke="#000" fill="#fff" />
+                           </g>
+                    </svg>
+
+                    <div id="roomLabel" class="absolute hidden bg-[#0097b2] text-white px-2 py-1 rounded text-sm">
+                    </div>
+
+                </div>
+
+                <div id="infoPanel"
+                    class="w-full md:w-2/5 border border-solid border-black rounded p-4 bg-white shadow">
+                    <h3 class="text-2xl font-bold mb-2 text-[#0097b2]">Информация</h3>
+                    <div id="infoContent" class="space-y-2 text-lg text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <i id="infoIcon" class="text-xl"></i>
+                            <span id="infoName" class="font-semibold">Нажмите на комнату, чтобы узнать о ней
+                                подробнее</span>
+                        </div>
+                        <p id="infoDesc" class="mt-2 text-sm"></p>
+                        <img id="infoPhoto" class="mt-2 rounded shadow w-full h-40 object-cover" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
+                    </a>
+
+                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p class="text-gray-800">vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+
+                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./scrips/auth.js"></script>
+    <script type="module" src="./scrips/burger.js"></script>
+    <script type="module" src="./scrips/interactiveMap.js"></script>
+
+</body>
+
+</html>
