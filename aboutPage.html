@@ -5,66 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about us</title>
     <link rel="stylesheet" href="styles/style-servises.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 </head>
-<body>
-    <div class="header">
-        <div class="header-logo"><img src="img/icons/pawIcon.png"/></div>
-        <div class="header-menu">
-            <div class="header-menu_theme"><img class="theme-icon" src="img/icons/sunIcon.png"/></div>
-            <div class="header-menu_main">Главная</div>
-            <div class="header-menu_other">О нас</div>
-            <div class="header-menu_servises">Услуги</div>
-            <div class="header-menu_doctors">Врачи</div>
-        </div>
-        <div class="header-nav">
-            <div class="header-nav_reg">Регистрация</div>
-            <div class="header-nav_entrance">Вход</div>
-        </div>
-    </div>
-    <div class="main">
-        <div class="main_container">
-            <img class="theme-icon" src="img/onPages/main.jpg"/>
-            <div><p class="text-header">Наша миссия</p>
-            <div class="text-container1">быть вашим надежным партнером в заботе о здоровье и качестве жизни питомца. Мы стремимся не только предоставлять медицинскую помощь высочайшего уровня с использованием современных технологий, но и окружать животных искренней заботой, а вас — понятными консультациями и поддержкой. Мы верим, что крепкое здоровье домашнего любимца — это основа счастливых и долгих лет, проведенных вместе.</div></div>
-        </div>
-        <p class="text-header">История клиники “Хвостатый доктор”</p>
-        <div class="text-container2">  Наша история — это путь постоянного развития и стремления к высочайшим стандартам ветеринарной медицины. С самого основания мы поставили перед собой цель создать клинику, которая объединит передовые технологии, глубокие знания и лучших специалистов. Сегодня мы гордимся тем, что выросли в полноценный современный центр, где диагностика, лечение и профилактика заболеваний проводятся на уровне, которому вы можете доверять безоговорочно.
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
 
-        С годами, благодаря вашему доверию, наша маленькая практика выросла в современную клинику, но неизменным осталось главное — наше теплое и ответственное отношение к каждому пациенту, будь то игривый щенок или мудрый старший друг.</div>
-        <p class="text-header">Наше оборудование</p>
-    </div>
-    <div class="footer">
-        <div class="footer-logo">
-            <img class="logo-icon" src="img/icons/pawIcon.png"/>
-            <text>Лечим Ваших домашних питомцев, </br> делаем их жизнь лучше и здоровее</text>
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+                <button id="burger" class="md:hidden p-2 text-black dark:text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+                        <button id="theme-toggle" class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
+                            <img src="img/icons/sunIcon.png" class="h-9 w-auto">
+                        </button>
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Врачи
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-contacts">
-            <h> Контакты: </h>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>ул. Немига, д. 40 г. Минск</text>
-            </div>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>+375 (29) 123-45-67</text>
-            </div>
-            <div class="footer-contacts_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>vetPet@gmail.com</text>
+    </header>
+    <section class="pt-8 pb-10 font-thin text-base/6 bg-[#fff] dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 max-w-[1100px]"> 
+            <section class="pt-24 pb-10">
+                <div class="container mx-auto px-4 max-w-[1100px]">
+                    <div class="mb-16">
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-1/2">
+                                <img src="/img/onPages/main.jpg" alt=" " class="rounded-lg shadow-lg dark:shadow-gray-700/50">
+                            </div>
+                            <div class="lg:w-1/2 p-7">
+                                <h2 class="text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-6">Наша миссия</h2>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">быть вашим надежным партнером в заботе о здоровье и качестве жизни питомца. Мы стремимся не только предоставлять медицинскую помощь высочайшего уровня с использованием современных технологий, но и окружать животных искренней заботой, а вас — понятными консультациями и поддержкой. Мы верим, что крепкое здоровье домашнего любимца — это основа счастливых и долгих лет, проведенных вместе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-16">
+                        <div class="flex gap-8">
+                            <div class=" ">
+                                <h2 class="text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-6">История клиники "Хвостатый доктор"</h2>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">Наша история — это путь постоянного развития и стремления к высочайшим стандартам ветеринарной медицины. С самого основания мы поставили перед собой цель создать клинику, которая объединит передовые технологии, глубокие знания и лучших специалистов. Сегодня мы гордимся тем, что выросли в полноценный современный центр, где диагностика, лечение и профилактика заболеваний проводятся на уровне, которому вы можете доверять безоговорочно.</p>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">С годами, благодаря вашему доверию, наша маленькая практика выросла в современную клинику, но неизменным осталось главное — наше теплое и ответственное отношение к каждому пациенту, будь то игривый щенок или мудрый старший друг.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-16">
+                        <h2 class="text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-12">Наше оборудование</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-white dark:bg-gray-700 rounded-lg dark:shadow-gray-900/50 overflow-hidden transition-colors">
+                                <img src="img/equipment/dental-unit.webp" alt=" " class="w-full h-49 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-3">Стоматологическая установка</h3>
+                                    <p class="text-gray-700 dark:text-gray-300 text-justify">Ветеринарная передвижная стоматологическая установка для проведения комплексного лечения совместно с диагностикой. Совмещает в себе стоматологический блок и рентген-аппарат с возможностью моментального выведения снимка на экран.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg dark:shadow-gray-900/50 overflow-hidden transition-colors">
+                                <img src="img/equipment/syringe-dispenser.png" alt=" " class="w-full h-49 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-3">Шприцевой дозатор</h3>
+                                    <p class="text-gray-700 dark:text-gray-300 text-justify">ВSino MDT SN-50C6 – высокоточный и удобный в использовании одноканальный шприцевой дозатор, применяемый в ветеринарии. Прибор обладает высокой точностью дозирования препаратов, надежностью работы и простотой использования.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg dark:shadow-gray-900/50 overflow-hidden transition-colors">
+                                <img src="img/equipment/xray.png" alt=" " class="w-full h-49 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-3">Cтационарный ветеринарный рентгеновский аппарат</h3>
+                                    <p class="text-gray-700 dark:text-gray-300 text-justify">с полной синхронизацией. Разработан специально для исследования животных. Объединяет в себе передовые технологии, высокое качество и удобное управление.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg dark:shadow-gray-900/50 overflow-hidden transition-colors">
+                                <img src="img/equipment/usi.jpg" alt=" " class="w-full h-49 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold text-[#0097b2] dark:text-[#38bdf8] text-center mb-3">Современный УЗИ с цветным доплером</h3>
+                                    <p class="text-gray-700 dark:text-gray-300 text-justify">Ультразвуковой сканер премиум-класса с превосходным качеством изображения и передовыми технологиями. Основан на платформе ZST+.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 from-blue-50 to-green-50 dark:from-gray-700 dark:to-gray-600 transition-colors duration-300">
+                <div class="container mx-auto px-4 max-w-[1100px]">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-4">Видео о работе клиники</h2>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl dark:shadow-gray-900/50 transition-colors">
+                        <iframe 
+                            class="w-full aspect-video rounded-xl"
+                            src="https://www.youtube.com/embed/V8sqvhNZS4M"
+                            title="Видео о нашей клинике"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>    
+    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt=" " class="h-12 w-auto">
+                    </a>
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p>ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p>+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p>vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="footer-other">
-            <h>Режим работы:</h>
-            <div class="footer-other_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>Пн–Вс: 10:00-20:00</text>
-            </div>
-            <h>Реквизиты:</h>
-            <div class="footer-other_container">
-            <img class="icon" src="img/icons/pawIcon.png"/> 
-            <text>BY12 3456 7890 1234 5678 9012</text>
-            </div>
-        </div>
-    </div>
+    </footer>
+    <script src="scrips/theme.js"></script>
 </body>
 </html>
