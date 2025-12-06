@@ -7,14 +7,18 @@
     <title>Хвостатый доктор</title>
     <link rel="icon" href="img/icons/pawIconColored.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+<header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -22,255 +26,228 @@
                     <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
                 </a>
 
-
-                <button id="burger" class="md:hidden p-2 text-white ">
+                <button id="burger" class="md:hidden p-2 text-black dark:text-white ">
                     <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
                 </button>
-
-                <nav id="mobileMenu"
-                    class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] hidden flex flex-col items-center p-4 space-y-4">
-                    <a href="/homePage.html" class="block">Главная</a>
-                    <a href="/aboutPage.html" class="block">О нас</a>
-                    <a href="/servicesPage.html" class="block">Услуги</a>
-                    <a href="/doctorsPage.html" class="block">Врачи</a>
-                    <a href="/clinicMap.html" class="block">Интерактивная карта</a>
-                    <a href="/logIn.html" id="authBtnMobile" class="block">Вход</a>
-                </nav>
-
 
                 <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
                     <div class="flex items-center space-x-6 mx-auto">
 
-
-                        <button id="theme-toggle" class="p-2 ">
-                            <img src="img/icons/sunIcon.png" class="h-10 w-auto">
+                        <button id="theme-toggle" class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
+                            <img src="img/icons/sunIcon.png" class="h-9 w-auto">
                         </button>
 
-
                         <div class="flex items-center space-x-6 ">
-                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Главная
                             </a>
 
-                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 О нас
                             </a>
 
-                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Услуги
                             </a>
 
-                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Врачи
                             </a>
-
-
-                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
-                                Карта</a>
-
+                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Карта
+                            </a>
                         </div>
-
-
                     </div>
-
-                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
-                        Вход
-                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-
-    <section id="startInfo" class="pt-20 pb-10 bg-white">
+    <section id="startInfo" class="pt-20 pb-10 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                    <img src="img/onPages/doctor.png" class="w-full max-h-[350px] object-contain border rounded-xl">
+                    <img src="img/onPages/doctor.png" class="w-full max-h-[350px] object-contain border rounded-xl dark:border-gray-600">
                 </div>
                 <div>
-                    <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">
+                    <h2 class=" flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
                         Хвостатый доктор</h2>
-                    <p class="m-4 text-sm sm:text-base">
+                    <p class="m-4 text-sm sm:text-base dark:text-gray-300">
                         Наши специалисты всегда готовы прийти на помощь! Ветклиника новая, кабинеты оснащены современным
-                        оборудованием. </p>
-                    <p class="m-4 text-sm sm:text-base"> Установим причину проблемы, поможем вашему питомцу справиться с
-                        болезнью, защитим от
-                        инфекций.
-                        Проконсультируем и дадим рекомендации по уходу </p>
-
-                    <p class="m-4 text-sm sm:text-base"> Мы на рынке ветеринарных услуг Минска не первый год и
-                        зарекомендовала себя как надежная
+                        оборудованием.
+                    </p>
+                    <p class="m-4 text-sm sm:text-base dark:text-gray-300">
+                        Установим причину проблемы, поможем вашему питомцу справиться с болезнью, защитим от инфекций.
+                        Проконсультируем и дадим рекомендации по уходу
+                    </p>
+                    <p class="m-4 text-sm sm:text-base dark:text-gray-300">
+                        Мы на рынке ветеринарных услуг Минска не первый год и зарекомендовала себя как надежная
                         клиника, с высококлассными врачами, современным оборудованием и доступными ценами на услуги.
                     </p>
                 </div>
             </div>
+        </div>
     </section>
 
-    <section id="advantages" class="pt-8 pb-10 ">
+    <section id="advantages" class="pt-8 pb-10 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">Наши
-                преимущества</h2>
+            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+                Наши преимущества
+            </h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-
-                <div class="p-6 text-black border border-black rounded-xl">
+                <div class="p-6 text-black dark:text-white border border-black dark:border-gray-700 rounded-xl dark:bg-gray-800 transition-colors">
                     <div class="text-center">
                         <div class="flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-stethoscope text-2xl"></i>
+                            <i class="fas fa-stethoscope text-2xl text-[#0097b2] dark:text-[#38bdf8]"></i>
                         </div>
-                        <h3 class="text-xl text-[#0097b2] font-bold mb-3">Комплексный подход</h3>
-                        <p class="text-black text-sm">Диагностика и лечение в одном месте</p>
+                        <h3 class="text-xl text-[#0097b2] dark:text-[#38bdf8] font-bold mb-3">Комплексный подход</h3>
+                        <p class="text-black dark:text-gray-300 text-sm">Диагностика и лечение в одном месте</p>
                     </div>
                 </div>
 
-                <div class="p-6 text-black border border-black rounded-xl">
+                <div class="p-6 text-black dark:text-white border border-black dark:border-gray-700 rounded-xl dark:bg-gray-800 transition-colors">
                     <div class="text-center">
                         <div class="flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heartbeat text-2xl"></i>
+                            <i class="fas fa-heartbeat text-2xl text-[#0097b2] dark:text-[#38bdf8]"></i>
                         </div>
-                        <h3 class="text-xl text-[#0097b2] font-bold mb-3">Экстренная помощь</h3>
-                        <p class="text-black text-sm">Срочный прием без очереди при угрозе жизни</p>
+                        <h3 class="text-xl text-[#0097b2] dark:text-[#38bdf8] font-bold mb-3">Экстренная помощь</h3>
+                        <p class="text-black dark:text-gray-300 text-sm">Срочный прием без очереди при угрозе жизни</p>
                     </div>
                 </div>
 
-                <div class="p-6 text-black border border-black rounded-xl">
+                <div class="p-6 text-black dark:text-white border border-black dark:border-gray-700 rounded-xl dark:bg-gray-800 transition-colors">
                     <div class="text-center">
                         <div class="flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-flask text-2xl"></i>
+                            <i class="fas fa-flask text-2xl text-[#0097b2] dark:text-[#38bdf8]"></i>
                         </div>
-                        <h3 class="text-xl text-[#0097b2] font-bold mb-3">Современное оборудование</h3>
-                        <p class="text-black text-sm">Лаборатория, рентген и УЗИ для точной диагностики</p>
+                        <h3 class="text-xl text-[#0097b2] dark:text-[#38bdf8] font-bold mb-3">Современное оборудование</h3>
+                        <p class="text-black dark:text-gray-300 text-sm">Лаборатория, рентген и УЗИ для точной диагностики</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="articles" class="pt-8 pb-10">
+    <section id="articles" class="pt-8 pb-10 dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#0097b2] mb-12">Полезные статьи</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#0097b2] dark:text-[#38bdf8] mb-12">Полезные статьи</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="border rounded-2xl overflow-hidden">
+                <div class="border dark:border-gray-700 rounded-2xl overflow-hidden dark:bg-gray-700 transition-colors">
                     <img src="https://vet.4lapy.ru/upload/iblock/c21/c21ccd0b1fbbff9883b7769d6e875d05.jpg"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Первая помощь питомцу</h3>
-                        <p class="text-gray-600 mb-4">Что делать до приезда ветеринара</p>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Первая помощь питомцу</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Что делать до приезда ветеринара</p>
                         <a href="http://vet.4lapy.ru/news/pravila-pervoy-pomoshi/"
-                            class="text-[#0097b2] font-semibold">Читать →</a>
+                            class="text-[#0097b2] dark:text-[#38bdf8] font-semibold hover:underline">Читать →</a>
                     </div>
                 </div>
 
-                <div class="border rounded-2xl overflow-hidden">
+                <div class="border dark:border-gray-700 rounded-2xl overflow-hidden dark:bg-gray-700 transition-colors">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfWtDguHIKpOLk3ctr5MXlC0UpktK-XgR8yg&s"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Правильное питание</h3>
-                        <p class="text-gray-600 mb-4">Как выбрать корм и рассчитать порции</p>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Правильное питание</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Как выбрать корм и рассчитать порции</p>
                         <a href="https://www.proplan.eu/ru/dailyportioncalculator"
-                            class="text-[#0097b2] font-semibold">Читать →</a>
+                            class="text-[#0097b2] dark:text-[#38bdf8] font-semibold hover:underline">Читать →</a>
                     </div>
                 </div>
 
-                <div class="border rounded-2xl overflow-hidden">
+                <div class="border dark:border-gray-700 rounded-2xl overflow-hidden dark:bg-gray-700 transition-colors">
                     <img src="https://vet.4lapy.ru/upload/iblock/881/881ab3461e668964aae747c51701521d.jpg"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Стресс и депрессия</h3>
-                        <p class="text-gray-600 mb-4">Как распознать страсс и депрессию у домашних питомцев</p>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Стресс и депрессия</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Как распознать страсс и депрессию у домашних питомцев</p>
                         <a href="https://vet.4lapy.ru/news/priznaki-stressa-u-domashnih-zhivotnyh/"
-                            class="text-[#0097b2] font-semibold">Читать →</a>
+                            class="text-[#0097b2] dark:text-[#38bdf8] font-semibold hover:underline">Читать →</a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
 
-
-    <section id="countInfo" class="pt-8 pb-10">
+    <section id="countInfo" class="pt-8 pb-10 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">Наши
-                достижния</h2>
+            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+                Наши достижения
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div>
-                    <div class="text-4xl font-bold mb-2" id="patientsCount">250+</div>
-                    <p>Вылеченных питомцев</p>
+                    <div class="text-4xl font-bold mb-2 text-[#0097b2] dark:text-[#38bdf8]" id="patientsCount">250+</div>
+                    <p class="dark:text-gray-300">Вылеченных питомцев</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold mb-2" id="yearsCount">5+</div>
-                    <p>Лет опыта</p>
+                    <div class="text-4xl font-bold mb-2 text-[#0097b2] dark:text-[#38bdf8]" id="yearsCount">5+</div>
+                    <p class="dark:text-gray-300">Лет опыта</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-bold mb-2" id="emergencyCount">50+</div>
-                    <p>Экстренных случаев</p>
+                    <div class="text-4xl font-bold mb-2 text-[#0097b2] dark:text-[#38bdf8]" id="emergencyCount">50+</div>
+                    <p class="dark:text-gray-300">Экстренных случаев</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="map" class="pt-8 pb-10">
+    <section id="map" class="pt-8 pb-10 dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] mb-6">Где мы
-                находимся?</h2>
+            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+                Где мы находимся?
+            </h2>
 
-            <div class="max-w-5xl mx-auto ">
-                <div class="shadow-xl rounded-xl  overflow-hidden">
+            <div class="max-w-5xl mx-auto">
+                <div class="shadow-xl rounded-xl overflow-hidden">
                     <div class="grid lg:grid-cols-2">
-
-                        <div class="bg-white rounded-2xl shadow-2xl relative z-0">
+                        <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-2xl relative z-0 transition-colors">
                             <div id="vetClinicMap" class="h-[500px] w-full"></div>
                         </div>
 
-                        <div class="p-8 bg-gradient-to-b from-[#0097b2] to-[#86c98b]">
-                            <h3 class="text-2xl font-bold mb-6 flex justify-center items-center">Контакты</h3>
+                        <div class="p-8 bg-gradient-to-b from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors">
+                            <h3 class="text-2xl font-bold mb-6 flex justify-center items-center text-white">Контакты</h3>
 
                             <div class="space-y-4 grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2">
                                 <div class="flex items-start space-x-3">
-                                    <i class="fas fa-map-marker-alt mt-1"></i>
+                                    <i class="fas fa-map-marker-alt mt-1 text-white"></i>
                                     <div>
-                                        <p class="font-semibold">Адрес:</p>
-                                        <p class="text-gray-800">ул. Немига, д. 40<br>г. Минск, Беларусь</p>
+                                        <p class="font-semibold text-white">Адрес:</p>
+                                        <p class="text-gray-200">ул. Немига, д. 40<br>г. Минск, Беларусь</p>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start space-x-3">
-                                    <i class="fas fa-phone mt-1"></i>
+                                    <i class="fas fa-phone mt-1 text-white"></i>
                                     <div>
-                                        <p class="font-semibold">Телефон:</p>
-                                        <p class="text-gray-800">+375 (29) 123-45-67</p>
+                                        <p class="font-semibold text-white">Телефон:</p>
+                                        <p class="text-gray-200">+375 (29) 123-45-67</p>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start space-x-3">
-                                    <i class="fas fa-envelope mt-1"></i>
+                                    <i class="fas fa-envelope mt-1 text-white"></i>
                                     <div>
-                                        <p class="font-semibold">Email:</p>
-                                        <p class="text-gray-800">vetPet@gmail.com</p>
+                                        <p class="font-semibold text-white">Email:</p>
+                                        <p class="text-gray-200">vetPet@gmail.com</p>
                                     </div>
                                 </div>
 
                                 <div class="flex items-start space-x-3">
-                                    <i class="fas fa-clock mt-1"></i>
+                                    <i class="fas fa-clock mt-1 text-white"></i>
                                     <div>
-                                        <p class="font-semibold">Режим работы:</p>
-                                        <p class="text-gray-800">Пн-Вс: 10:00-20:00</p>
+                                        <p class="font-semibold text-white">Режим работы:</p>
+                                        <p class="text-gray-200">Пн-Вс: 10:00-20:00</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mt-8 pt-6 border-t">
-                                <p class="text-gray text-sm">
+                            <div class="mt-8 pt-6 border-t border-white/30">
+                                <p class="text-gray-200 text-sm">
                                     <i class="fas fa-car mr-2"></i>
                                     Есть парковка для автомобилей
                                 </p>
-                                <p class="text-gray text-sm mt-2">
+                                <p class="text-gray-200 text-sm mt-2">
                                     <i class="fas fa-bus mr-2"></i>
                                     Остановка общественного транспорта рядом
                                 </p>
@@ -279,69 +256,61 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
         <div class="container mx-auto">
-
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
                 <div class="p-4 ">
                     <a href="/homePage.html" class="flex items-center">
-                        <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
+                        <img src="img/icons/pawIcon.png" alt=" " class="h-12 w-auto">
                     </a>
-
-                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
-
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
                     <ul class="text-lg gap-2 flex flex-col justify-center items-center">
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-map-marker-alt mt-1"></i>
-                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                                <p>ул. Немига, д. 40 г. Минск</p>
                             </div>
                         </li>
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-phone mt-1"></i>
-                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                                <p>+375 (29) 123-45-67</p>
                             </div>
                         </li>
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-envelope mt-1"></i>
-                                <p class="text-gray-800">vetPet@gmail.com</p>
+                                <p>vetPet@gmail.com</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
-                    <p class="flex gap-2 justify-center items-center">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
                         <i class="fas fa-clock mt-1"></i>
                         Пн–Вс: 10:00-20:00
                     </p>
-
-                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
-                    <p class="flex gap-2 justify-center items-center">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
                         <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
                     </p>
-
                 </div>
             </div>
         </div>
     </footer>
 
-
     <script type="module" src="scrips/map.js"></script>
     <script type="module" src="./scrips/auth.js"></script>
     <script type="module" src="./scrips/burger.js"></script>
-
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="scrips/theme.js"></script>
 </body>
-
 </html>

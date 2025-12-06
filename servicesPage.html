@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>servises</title>
+    <link rel="stylesheet" href="styles/style-servises.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-800 transition-colors duration-300">
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 ">
+
+                <a href="/homePage.html" class="flex items-center ">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                </a>
+
+                <button id="burger" class="md:hidden p-2 text-black dark:text-white ">
+                    <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
+                </button>
+
+                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                    <div class="flex items-center space-x-6 mx-auto">
+
+                        <button id="theme-toggle" class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
+                            <img src="img/icons/sunIcon.png" class="h-9 w-auto">
+                        </button>
+
+                        <div class="flex items-center space-x-6 ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Главная
+                            </a>
+
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                О нас
+                            </a>
+
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Услуги
+                            </a>
+
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Врачи
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section  class="pt-8 pb-10">
+        <div class="container mx-auto px-4 max-w-[1400px]">
+            <div class="main">
+                <div class="main-content text-[#0097b2]">
+                    <div class="main-content_box dark:text-[#38bdf8]">
+                        <proc>Вакцианция</proc>
+                        <img class="procedure-img"src="img/Procedures/vaccination.jpg"/>
+                    </div>
+                    <div class="main-content_box dark:text-[#38bdf8]">
+                        <proc>Диагностика</proc>
+                        <img class="procedure-img"src="img/Procedures/diagnostics.jpg"/>
+                    </div>
+                    <div class="main-content_box dark:text-[#38bdf8]">
+                        <proc>Стоматология</proc>
+                        <img class="procedure-img"src="img/Procedures/dentistry.jpeg"/>
+                    </div>
+                    </div>
+                    <div class="main-content">
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Хирургия</proc>
+                        <img class="procedure-img"src="img/Procedures/surgery.jpg"/>
+                    </div>
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Кастрация и стерилизация</proc>
+                        <img class="procedure-img"src="img/Procedures/castration.jpeg"/>
+                    </div>
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Офтальмология</proc>
+                        <img class="procedure-img"src="img/Procedures/ophthalmology.jpg"/>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Терапия</proc>
+                        <img class="procedure-img"src="img/Procedures/therapy.jpg"/>
+                    </div>
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Первичный прием</proc>
+                        <img class="procedure-img"src="img/Procedures/appointment.webp"/>
+                    </div>
+                    <div class="main-content_box  dark:text-[#38bdf8]">
+                        <proc>Дневной стационар</proc>
+                        <img class="procedure-img"src="img/Procedures/hospital.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
+                <div class="p-4 ">
+                    <a href="/homePage.html" class="flex items-center">
+                        <img src="img/icons/pawIcon.png" alt=" " class="h-12 w-auto">
+                    </a>
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
+                    <ul class="text-lg gap-2 flex flex-col justify-center items-center">
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-map-marker-alt mt-1"></i>
+                                <p>ул. Немига, д. 40 г. Минск</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-phone mt-1"></i>
+                                <p>+375 (29) 123-45-67</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex gap-2 text-black dark:text-white">
+                                <i class="fas fa-envelope mt-1"></i>
+                                <p>vetPet@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
+                        <i class="fas fa-clock mt-1"></i>
+                        Пн–Вс: 10:00-20:00
+                    </p>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center text-black dark:text-white">
+                        <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scrips/theme.js"></script>
+</body>
+</html>
