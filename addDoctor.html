@@ -7,73 +7,64 @@
     <title> Хвостатый доктор</title>
     <link rel="icon" href="img/icons/pawIconColored.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16 ">
+            <div class="flex items-center justify-between h-16">
 
-                <a href="/homePage.html" class="flex items-center ">
-                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto ">
+                <a href="/homePage.html" class="flex items-center">
+                    <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
                 </a>
 
-
-                <button id="burger" class="md:hidden p-2 text-white ">
+                <button id="burger" class="md:hidden p-2 text-white hover:bg-white/20 rounded transition">
                     <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
                 </button>
 
                 <nav id="mobileMenu"
-                    class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] hidden flex flex-col items-center p-4 space-y-4">
-                    <a href="/homePage.html" class="block">Главная</a>
-                    <a href="/aboutPage.html" class="block">О нас</a>
-                    <a href="/servicesPage.html" class="block">Услуги</a>
-                    <a href="/doctorsPage.html" class="block">Врачи</a>
-                    <a href="/clinicMap.html" class="block">Интерактивная карта</a>
-                    <a href="/logIn.html" id="authBtnMobile" class="block">Вход</a>
+                    class="fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] hidden flex flex-col items-center p-4 space-y-4 z-40">
+                    <a href="/homePage.html" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center">Главная</a>
+                    <a href="/aboutPage.html" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center">О нас</a>
+                    <a href="/servicesPage.html" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center">Услуги</a>
+                    <a href="/doctorsPage.html" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center bg-white/10 font-semibold">Врачи</a>
+                    <a href="/clinicMap.html" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center">Интерактивная карта</a>
+                    <a href="/logIn.html" id="authBtnMobile" class="block text-black dark:text-white hover:bg-white/20 px-4 py-2 rounded transition w-full text-center">Вход</a>
                 </nav>
 
-
                 <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
-
                     <div class="flex items-center space-x-6 mx-auto">
-
-
-                        <button id="theme-toggle" class="p-2 ">
+                        <button id="theme-toggle" class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
                             <img src="img/icons/sunIcon.png" class="h-10 w-auto">
                         </button>
 
-
                         <div class="flex items-center space-x-6 ">
-                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Главная
                             </a>
-
-                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium  ">
+                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 О нас
                             </a>
-
-                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Услуги
                             </a>
-
-                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ttext-black dark:text-white hover:bg-white/20 transition bg-white/10 font-semibold">
                                 Врачи
                             </a>
-
-
-                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
-                                Карта</a>
-
+                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                                Карта
+                            </a>
                         </div>
-
-
                     </div>
 
-                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium ">
+                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                         Вход
                     </a>
                 </div>
@@ -81,179 +72,166 @@
         </div>
     </header>
 
-
-    <section class="pt-24 pb-16">
+    <section class="pt-24 pb-16 dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-
             <div class="mb-8">
-                <a href="/doctorsPage.html" class="text-[#0097b2] hover:text-[#007a94] font-semibold">
+                <a href="/doctorsPage.html" class="text-[#0097b2] dark:text-[#38bdf8] hover:text-[#007a94] dark:hover:text-[#0ea5e9] font-semibold transition-colors inline-flex items-center gap-2">
                     <i class="fa-solid fa-arrow-left"></i>
                     Назад к списку врачей
                 </a>
             </div>
 
-
             <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] mb-4">Добавить нового врача</h1>
-                <p class="text-lg text-gray-600">Заполните информацию о новом специалисте</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-4">Добавить нового врача</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Заполните информацию о новом специалисте</p>
             </div>
 
-
-            <div class="bg-[#0097b2]/20 rounded-2xl p-8">
-                <form id="doctorForm" class="space-y-6">
-
+            <div class="bg-[#0097b2]/20 dark:bg-gray-700/50 rounded-2xl p-8 shadow-xl dark:shadow-gray-900/50 transition-colors">
+                <form id="doctorForm" class="space-y-8">
                     <div>
-                        <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fa-solid fa-user-doctor text-[#0097b2] mr-2"></i>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                            <i class="fa-solid fa-user-doctor text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                             ФИО врача *
                         </label>
                         <input type="text" id="doctorName" placeholder="Иванов Иван Иванович"
-                            class="w-full p-3 border border-gray-300 rounded-lg " required>
+                            class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500"
+                            required>
                     </div>
 
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-stethoscope text-[#0097b2] mr-2"></i>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                                <i class="fas fa-stethoscope text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                                 Специализация *
                             </label>
                             <input type="text" id="doctorSpecialty" placeholder="Хирург"
-                                class="w-full p-3 border border-gray-300 rounded-lg " required>
+                                class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500"
+                                required>
                         </div>
 
                         <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-briefcase text-[#0097b2] mr-2"></i>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                                <i class="fas fa-briefcase text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                                 Опыт работы *
                             </label>
                             <input type="text" id="doctorExperience" placeholder="5 лет"
-                                class="w-full p-3 border border-gray-300 rounded-lg" required>
+                                class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500"
+                                required>
                         </div>
                     </div>
 
-
                     <div>
-                        <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fas fa-graduation-cap text-[#0097b2] mr-2"></i>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                            <i class="fas fa-graduation-cap text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                             Образование *
                         </label>
                         <input type="text" id="doctorEducation" placeholder="БГМУ, хирургия животных"
-                            class="w-full p-3 border border-gray-300 rounded-lg " required>
+                            class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500"
+                            required>
                     </div>
 
-
                     <div>
-                        <label class="block text-gray-700 mb-2 font-semibold">
-                            <i class="fas fa-file-alt text-[#0097b2] mr-2"></i>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                            <i class="fas fa-file-alt text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                             Биография и достижения
                         </label>
                         <textarea id="doctorBio" placeholder="Опыт работы, специализация, достижения, награды"
-                            class="w-full p-3 border border-gray-300 rounded-lg " rows="4"></textarea>
-
+                            class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 resize-y min-h-[120px]"
+                            rows="4"></textarea>
                     </div>
 
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <label class="block text-gray-700 mb-2 font-semibold">
-                                <i class="fas fa-camera text-[#0097b2] mr-2"></i>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                                <i class="fas fa-camera text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                                 Фото врача
                             </label>
-                            <p><input id="doctorPhoto" class="w-full p-3 border border-gray-300 rounded-lg" type="file"
-                                accept="image/*" name="pic"></p>
+                            <input id="doctorPhoto" 
+                                   class="w-full p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white file:mr-4 file:py-3 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#0097b2] dark:file:bg-[#38bdf8] file:text-white hover:file:bg-[#007a94] dark:hover:file:bg-[#0ea5e9] transition-colors" 
+                                   type="file" accept="image/*" name="pic">
                         </div>
 
-                        <div className="mb-3">
-
-                            <div>
-                                <label class="block text-gray-700 mb-2 font-semibold">
-                                    <i class="fas fa-clock text-[#0097b2] mr-2"></i>
-                                    График работы
-                                </label>
-                                <input type="text" id="doctorSchedule" placeholder="Пн-Пт: 9:00-18:00"
-                                    class="w-full p-3 border border-gray-300 rounded-lg">
-                            </div>
+                        <div>
+                            <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
+                                <i class="fas fa-clock text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
+                                График работы
+                            </label>
+                            <input type="text" id="doctorSchedule" placeholder="Пн-Пт: 9:00-18:00"
+                                class="w-full p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white focus:border-[#0097b2] dark:focus:border-[#38bdf8] focus:ring-2 focus:ring-[#0097b2]/20 dark:focus:ring-[#38bdf8]/20 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500">
                         </div>
                     </div>
 
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                         <button type="submit" id="submitBtn"
-                            class=" submitBtn  bg-[#0097b2] text-white py-3 rounded-lg hover:bg-[#007a94] font-semibold ">
-                            Добавить врача
+                            class="submitBtn px-8 py-4 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded-xl hover:bg-[#007a94] dark:hover:bg-[#0ea5e9] font-semibold transition-all duration-300 shadow-lg hover:shadow-xl dark:shadow-gray-900/50 transform hover:-translate-y-1 active:translate-y-0 text-lg">
+                            <span class="flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-user-plus"></i>
+                                Добавить врача
+                            </span>
                         </button>
                         <button type="button" id="clearBtn"
-                            class=" flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 font-semibold">
-                            Очистить форму
+                            class="px-8 py-4 bg-gray-500 dark:bg-gray-700 text-white rounded-xl hover:bg-gray-600 dark:hover:bg-gray-600 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl dark:shadow-gray-900/50 transform hover:-translate-y-1 active:translate-y-0 text-lg">
+                            <span class="flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-eraser"></i>
+                                Очистить форму
+                            </span>
                         </button>
-
                     </div>
                 </form>
             </div>
-
-
-
         </div>
     </section>
 
-    <footer class=" min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b]">
+    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
         <div class="container mx-auto">
-
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
-                <div class="p-4 ">
+                <div class="p-4">
                     <a href="/homePage.html" class="flex items-center">
                         <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
                     </a>
-
-                    <p class="text-lg py-4">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
-
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2">Контакты:</h4>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
                     <ul class="text-lg gap-2 flex flex-col justify-center items-center">
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-map-marker-alt mt-1"></i>
-                                <p class="text-gray-800">ул. Немига, д. 40 г. Минск</p>
+                                <p>ул. Немига, д. 40 г. Минск</p>
                             </div>
                         </li>
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-phone mt-1"></i>
-                                <p class="text-gray-800">+375 (29) 123-45-67</p>
+                                <p>+375 (29) 123-45-67</p>
                             </div>
                         </li>
                         <li>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 text-black dark:text-white">
                                 <i class="fas fa-envelope mt-1"></i>
-                                <p class="text-gray-800">vetPet@gmail.com</p>
+                                <p>vetPet@gmail.com</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2"> Режим работы:</h4>
-                    <p class="flex gap-2 justify-center items-center">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <p class="flex gap-2 justify-center items-center text-white">
                         <i class="fas fa-clock mt-1"></i>
                         Пн–Вс: 10:00-20:00
                     </p>
-
-                    <h4 class="text-2xl font-medium flex justify-center py-2">Реквизиты:</h4>
-                    <p class="flex gap-2 justify-center items-center">
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Реквизиты:</h4>
+                    <p class="flex gap-2 justify-center items-center text-white">
                         <i class="fa-solid fa-building-columns"></i> BY12 3456 7890 1234 5678 9012
                     </p>
-
                 </div>
             </div>
         </div>
     </footer>
 
-
+    <script src="scrips/theme.js"></script>
     <script type="module" src="./scrips/doctors/addDoctor.js"></script>
-     <script type="module" src="./scrips/auth.js"></script>     
-      <script type="module" src="./scrips/burger.js"></script>
-
+    <script type="module" src="./scrips/auth.js"></script>
+    <script type="module" src="./scrips/burger.js"></script>
 </body>
-
 </html>

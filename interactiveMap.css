@@ -7,3 +7,63 @@
   fill: #a086c9;
   stroke: #6a2f85;
 }
+
+.dark .room {
+  fill: #374151 !important;
+  stroke: #4B5563 !important;
+}
+        
+.dark #canvas_background {
+  fill: #1f2937 !important;
+}
+        
+.dark rect[stroke="#000"] {
+  stroke: #4B5563 !important;
+}
+        
+.dark rect[fill="#fff"] {
+  fill: #374151 !important;
+}
+        
+.dark path[fill="#fff"] {
+  fill: #374151 !important;
+}
+        
+.dark rect[stroke-dasharray="2,2"] {
+  stroke: #4B5563 !important;
+  fill: #374151 !important;
+}
+        
+.dark rect[fill="#e6fffa"] {
+  fill: #374151 !important;
+}
+        
+.dark rect[stroke="#0097b2"] {
+  stroke: #38bdf8 !important;
+}
+        
+.room:hover {
+  fill: #ccfbf1 !important;
+  stroke: #0d9488 !important;
+  stroke-width: 2px !important;
+}
+        
+.dark .room:hover {
+  fill: #4B5563 !important;
+  stroke: #38bdf8 !important;
+  stroke-width: 2px !important;
+}
+        
+.room.active {
+  fill: #99f6e4 !important;
+  stroke: #0d9488 !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 8px rgba(13, 148, 136, 0.5));
+}
+        
+.dark .room.active {
+  fill: #5eead4 !important;
+  stroke: #2dd4bf !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.5));
+  }
