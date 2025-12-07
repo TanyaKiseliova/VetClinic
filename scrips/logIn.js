@@ -4,7 +4,7 @@ document.getElementById("logInBtn").addEventListener("click", async (e) => {
   e.preventDefault();
 
   const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("password-input").value;
 
   const { data: user, error } = await supabase
     .from("users")
