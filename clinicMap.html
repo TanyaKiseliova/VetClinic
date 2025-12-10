@@ -18,7 +18,8 @@
 
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+    <header
+        class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -31,7 +32,8 @@
                 </button>
 
 
-                <nav id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
+                <nav id="mobileMenu"
+                    class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
                     <button class="theme-toggle"
                         class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
                         <img src="img/icons/sunIcon.png" class="h-9 w-auto">
@@ -43,7 +45,7 @@
                     <a href="/logIn.html" id="authBtnMobile" class="block dark:text-white">Вход</a>
                 </nav>
 
-                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8" >
+                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
                     <div class="flex items-center space-x-6 mx-auto">
 
@@ -91,12 +93,16 @@
 
     <section id="interactiveMap" class="pt-20 pb-10 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">Виртуальная интерактивная карта клиники</h2>
+            <h2
+                class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+                Виртуальная интерактивная карта клиники</h2>
 
             <div class="flex flex-col md:flex-row gap-6">
-                <div class="relative w-full md:w-3/5 flex justify-center items-center bg-gray-50 dark:bg-gray-900 p-4 rounded-xl shadow-lg dark:shadow-gray-900/50">
+                <div
+                    class="relative w-full md:w-3/5 flex justify-center items-center bg-gray-50 dark:bg-gray-900 p-4 rounded-xl shadow-lg dark:shadow-gray-900/50">
 
-                    <svg id="mapSvg" viewBox="0 0 480 535" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto border-2 border-solid border-gray-300 dark:border-gray-700 rounded-lg">
+                    <svg id="mapSvg" viewBox="0 0 480 535" xmlns="http://www.w3.org/2000/svg"
+                        class="w-full h-auto border-2 border-solid border-gray-300 dark:border-gray-700 rounded-lg">
                         <rect x="50" y="50" width="100" height="80" fill="#e6fffa" stroke="#0097b2" />
                         <g transform="scale(1.2)">
                             <g>
@@ -202,10 +208,136 @@
                                     stroke-dasharray="2,2" id="svg_33" height="109.13242" width="66.66667" y="183.27718"
                                     x="181.18943" fill-opacity="null" stroke-opacity="null" stroke-width="1.5"
                                     stroke="#000" fill="#fff" />
-                           </g>
+                            </g>
+
+                            <g class="room-icon" data-room="Кабинет первичного осмотра">
+                                <foreignObject x="300" y="90" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-user-doctor"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Комната персонала">
+                                <foreignObject x="170" y="60" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Гардероб">
+                                <foreignObject x="235" y="80" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-vest"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Туалет">
+                                <foreignObject x="150" y="110" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-restroom"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Регистратура и касса">
+                                <foreignObject x="88" y="90" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-cash-register"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Стоматология">
+                                <foreignObject x="205" y="360" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-tooth"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Стерилизационная">
+                                <foreignObject x="310" y="160" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-virus-covid-slash"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Операционная">
+                                <foreignObject x="310" y="250" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-user-nurse"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Палата реабилитации">
+                                <foreignObject x="300" y="360" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-bed-pulse"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+
+                            <g class="room-icon" data-room="Кабинет УЗИ и рентгена">
+                                <foreignObject x="90" y="230" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-x-ray"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Прививочный кабинет">
+                                <foreignObject x="90" y="300" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-syringe"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Лаборатория">
+                                <foreignObject x="90" y="370" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-flask"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+                            <g class="room-icon" data-room="Холл">
+                                <foreignObject x="120" y="170" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-house-medical"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+
+                            <g class="room-icon" data-room="Зал ожидания">
+                                <foreignObject x="202" y="230" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-couch"></i>
+                                    </div>
+                                </foreignObject>
+                            </g>
+
+
+                            <g class="room-icon" data-room="Вход">
+                                <foreignObject x="60" y="165" width="30" height="30">
+                                    <div xmlns="http://www.w3.org/1999/xhtml">
+                                        <i class="fa-solid fa-door-open"></i>
+                                    </div>
+                                </foreignObject>
+                                 <text x="75" y="200" text-anchor="middle" font-size="12" fill="#6b7280" font-weight="bold"> Вход  </text>
+                            </g>
+
                     </svg>
 
-                    <div id="roomLabel" class="absolute hidden bg-[#0097b2] dark:bg-[#38bdf8] text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg">
+                    <div id="roomLabel"
+                        class="absolute hidden bg-[#0097b2] dark:bg-[#38bdf8] text-white px-3 py-2 rounded-lg text-sm font-medium shadow-lg">
                     </div>
                 </div>
 
@@ -215,26 +347,30 @@
                     <div id="infoContent" class="space-y-4">
                         <div class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                             <i id="infoIcon" class="text-2xl text-[#0097b2] dark:text-[#38bdf8]"></i>
-                            <span id="infoName" class="font-semibold text-lg dark:text-white">Нажмите на комнату, чтобы узнать о ней подробнее</span>
+                            <span id="infoName" class="font-semibold text-lg dark:text-white">Нажмите на комнату, чтобы
+                                узнать о ней подробнее</span>
                         </div>
                         <p id="infoDesc" class="mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed"></p>
-                        <img id="infoPhoto" class="mt-2 rounded-lg shadow-md dark:shadow-gray-900/50 w-full h-48 object-cover" 
-                             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6' class='dark:fill-gray-700'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='%239ca3af' class='dark:fill-gray-400' text-anchor='middle' dy='.3em'%3EИзображение помещения%3C/text%3E%3C/svg%3E" 
-                             alt="Изображение помещения" />
+                        <img id="infoPhoto"
+                            class="mt-2 rounded-lg shadow-md dark:shadow-gray-900/50 w-full h-48 object-cover"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6' class='dark:fill-gray-700'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='%239ca3af' class='dark:fill-gray-400' text-anchor='middle' dy='.3em'%3EИзображение помещения%3C/text%3E%3C/svg%3E"
+                            alt="Изображение помещения" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
+    <footer
+        class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
                 <div class="p-4 ">
                     <a href="/homePage.html" class="flex items-center">
                         <img src="img/icons/pawIcon.png" alt=" " class="h-12 w-auto">
                     </a>
-                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь
+                        лучше и здоровее</p>
                 </div>
                 <div class="p-4">
                     <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
@@ -260,7 +396,8 @@
                     </ul>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:
+                    </h4>
                     <p class="flex gap-2 justify-center items-center text-black dark:text-white">
                         <i class="fas fa-clock mt-1"></i>
                         Пн–Вс: 10:00-20:00
@@ -279,4 +416,5 @@
     <script type="module" src="./scrips/burger.js"></script>
     <script type="module" src="./scrips/interactiveMap.js"></script>
 </body>
+
 </html>

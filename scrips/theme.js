@@ -1,9 +1,14 @@
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+const body = document.body;
+const themeToggle = document.getElementById('theme-toggle');
+
 function toggleTheme() {
   const html = document.documentElement;
   html.classList.toggle("dark");
   const isDark = html.classList.contains("dark");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-
+ closeMobileMenu();
    updateThemeIcons(isDark);
 }
 
@@ -50,3 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!localStorage.getItem("theme")) loadTheme();
     });
 });
+
+function closeMobileMenu() {
+  burger.classList.remove('active-burger');
+  mobileMenu.classList.add('hidden');
+  mobileMenu.classList.remove('active-navList');
+}
+
