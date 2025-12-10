@@ -18,7 +18,7 @@
 
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-    <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -30,40 +30,61 @@
                     <img src="img/icons/burgerIcon.png" class="h-12 w-auto">
                 </button>
 
-                <div class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
+
+                <nav id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
+                    <button class="theme-toggle"
+                        class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
+                        <img src="img/icons/sunIcon.png" class="h-9 w-auto">
+                    </button>
+                    <a href="/homePage.html" class="block dark:text-white ">Главная</a>
+                    <a href="/aboutPage.html" class="block dark:text-white ">О нас</a>
+                    <a href="/servicesPage.html" class="block dark:text-white ">Услуги</a>
+                    <a href="/doctorsPage.html" class="block dark:text-white ">Врачи</a>
+                    <a href="/logIn.html" id="authBtnMobile" class="block dark:text-white">Вход</a>
+                </nav>
+
+                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8" >
 
                     <div class="flex items-center space-x-6 mx-auto">
 
-                        <button id="theme-toggle" class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
+                        <button class="theme-toggle"
+                            class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
                             <img src="img/icons/sunIcon.png" class="h-9 w-auto">
                         </button>
 
                         <div class="flex items-center space-x-6 ">
-                            <a href="/homePage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                            <a href="/homePage.html"
+                                class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Главная
                             </a>
 
-                            <a href="/aboutPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                            <a href="/aboutPage.html"
+                                class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 О нас
                             </a>
 
-                            <a href="/servicesPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                            <a href="/servicesPage.html"
+                                class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Услуги
                             </a>
 
-                            <a href="/doctorsPage.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                            <a href="/doctorsPage.html"
+                                class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Врачи
                             </a>
-                            <a href="/clinicMap.html" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                            <a href="/clinicMap.html"
+                                class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                                 Карта
                             </a>
 
                         </div>
                     </div>
-                    <a href="/logIn.html" id="authBtn" class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
+                    <a href="/logIn.html" id="authBtn"
+                        class="nav-link px-3 py-2 rounded-md text-lg font-medium text-black dark:text-white hover:bg-white/20 transition">
                         Вход
                     </a>
                 </div>
+
             </div>
         </div>
     </header>

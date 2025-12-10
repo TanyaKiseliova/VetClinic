@@ -1,0 +1,36 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/homePage.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/homePage.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/aboutPage.html"
+    },
+    {
+      "source": "/doctors",
+      "destination": "/doctorsPage.html"
+    },
+    {
+      "source": "/addDoctors",
+      "destination": "/addDoctor.html"
+    },
+    {
+      "source": "/map",
+      "destination": "/clinicMap.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/servicesPage.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    }
+  ]
+}
