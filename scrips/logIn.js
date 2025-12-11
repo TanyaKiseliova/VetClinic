@@ -1,4 +1,5 @@
 import { supabase } from "./dbInfo.js";
+import { showPanel } from "./messages.js";
 
 document.getElementById("logInBtn").addEventListener("click", async (e) => {
   e.preventDefault();
@@ -13,18 +14,18 @@ document.getElementById("logInBtn").addEventListener("click", async (e) => {
     .single();
 
   if (error) {
-    alert("Ошибка, возможно, таких данных нет");
+     showPanel("Ошибка, возможно, таких данных нет");
     console.log("Ошибка запроса: " + error.message);
     return;
   }
 
   if (!user) {
-    alert("Пользователь не найден");
+     showPanel("Пользователь не найден");
     return;
   }
 
   if (user.password !== password) {
-    alert("Неверный пароль");
+     showPanel("Неверный пароль");
     return;
   }
 
@@ -36,10 +37,10 @@ document.getElementById("logInBtn").addEventListener("click", async (e) => {
         role: user.role,
       })
     );
-    alert("Добро пожаловать, администратор!");
+     showPanel("Добро пожаловать, администратор!", true);
     window.location.href = "../doctorsPage.html";
   } else {
-    alert("Нет доступа.");
+    showPanel("Нет доступа.");
   }
 });
 

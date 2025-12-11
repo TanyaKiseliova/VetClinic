@@ -18,7 +18,8 @@
 
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+    <header
+        class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -31,7 +32,8 @@
                 </button>
 
 
-                <nav id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
+                <nav id="mobileMenu"
+                    class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
                     <button class="theme-toggle"
                         class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
                         <img src="img/icons/sunIcon.png" class="h-9 w-auto">
@@ -40,10 +42,11 @@
                     <a href="/aboutPage.html" class="block dark:text-white ">О нас</a>
                     <a href="/servicesPage.html" class="block dark:text-white ">Услуги</a>
                     <a href="/doctorsPage.html" class="block dark:text-white ">Врачи</a>
+                    <a href="/clinicMap.html" class="block dark:text-white "> Карта </a>
                     <a href="/logIn.html" id="authBtnMobile" class="block dark:text-white">Вход</a>
                 </nav>
 
-                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8" >
+                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
                     <div class="flex items-center space-x-6 mx-auto">
 
@@ -93,7 +96,8 @@
         <div class="container mx-auto px-4 max-w-[1100px]">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                    <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+                    <h2
+                        class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
                         Наши специалисты
                     </h2>
                     <p class="m-4 text-sm sm:text-base dark:text-gray-300">
@@ -119,10 +123,11 @@
 
     <section id="doctorsCards" class="pt-20 pb-10 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
-            <h2 class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
+            <h2
+                class="flex justify-center items-center text-2xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-6">
                 Наши врачи-ветеринары
             </h2>
-            
+
             <img class="w-full max-w-md mx-auto mb-8" id="loading-gif" src="./img/dogLoading.gif" alt="Загрузка...">
 
             <div class="flex flex-col md:flex-row md:items-center md:space-x-4 mb-6">
@@ -146,20 +151,27 @@
     </section>
 
     <template id="doctorCardTemplate">
-        <div class="doctor-card bg-[#0097b2]/10 dark:bg-gray-800 rounded-xl p-6 flex flex-col border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-gray-900/50 hover:-translate-y-1">
+        <div
+            class="doctor-card bg-[#0097b2]/10 dark:bg-gray-800 rounded-xl p-6 flex flex-col border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-gray-900/50 hover:-translate-y-1">
             <img class="doctor-photo w-full h-48 object-cover rounded-md mb-4 dark:brightness-90" />
             <h2 class="doctor-name text-xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-2"></h2>
-            <p class="dark:text-gray-300"><span class="font-semibold">Специализация:</span> <span class="doctor-specialty"></span></p>
-            <p class="dark:text-gray-300"><span class="font-semibold">Опыт:</span> <span class="doctor-experience"></span></p>
-            <p class="dark:text-gray-300"><span class="font-semibold">Образование:</span> <span class="doctor-education"></span></p>
-            <p class="dark:text-gray-300"><span class="font-semibold">График:</span> <span class="doctor-schedule"></span></p>
+            <p class="dark:text-gray-300"><span class="font-semibold">Специализация:</span> <span
+                    class="doctor-specialty"></span></p>
+            <p class="dark:text-gray-300"><span class="font-semibold">Опыт:</span> <span
+                    class="doctor-experience"></span></p>
+            <p class="dark:text-gray-300"><span class="font-semibold">Образование:</span> <span
+                    class="doctor-education"></span></p>
+            <p class="dark:text-gray-300"><span class="font-semibold">График:</span> <span
+                    class="doctor-schedule"></span></p>
             <p class="doctor-bio mt-2 text-sm text-gray-600 dark:text-gray-400"></p>
 
             <div class="flex justify-center space-x-2 mt-4">
-                <button class="edit-btn bg-[#0097b2] dark:bg-[#38bdf8] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#007a94] dark:hover:bg-[#0ea5e9] transition-colors">
+                <button
+                    class="edit-btn bg-[#0097b2] dark:bg-[#38bdf8] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#007a94] dark:hover:bg-[#0ea5e9] transition-colors">
                     Редактировать
                 </button>
-                <button class="delete-btn bg-red-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-600 transition-colors">
+                <button
+                    class="delete-btn bg-red-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-600 transition-colors">
                     Удалить
                 </button>
             </div>
@@ -167,11 +179,13 @@
     </template>
 
     <div id="deleteModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-        <div class="bg-white dark:bg-gray-800 min-w-[150px] rounded-lg shadow-xl dark:shadow-gray-900/50 w-full max-w-sm sm:max-w-md p-6 mx-4 sm:mx-6 border dark:border-gray-700">
+        <div
+            class="bg-white dark:bg-gray-800 min-w-[150px] rounded-lg shadow-xl dark:shadow-gray-900/50 w-full max-w-sm sm:max-w-md p-6 mx-4 sm:mx-6 border dark:border-gray-700">
             <h2 class="text-xl font-bold mb-4 text-red-600 dark:text-red-400">Удалить врача?</h2>
             <p class="mb-4 dark:text-gray-300">Вы уверены, что хотите удалить этого врача?</p>
             <div class="flex justify-center flex-col md:flex-row gap-2">
-                <button type="button" id="closeDeleteModal" class="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors">Отмена</button>
+                <button type="button" id="closeDeleteModal"
+                    class="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors">Отмена</button>
                 <button type="button" id="confirmDeleteBtn"
                     class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors">Удалить</button>
             </div>
@@ -179,62 +193,90 @@
     </div>
 
     <div id="editModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl dark:shadow-gray-900/50 w-full max-w-lg md:max-w-2xl p-6 mx-2 border dark:border-gray-700">
+        <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-xl dark:shadow-gray-900/50 w-full max-w-lg md:max-w-2xl p-6 mx-2 border dark:border-gray-700">
             <h2 class="text-xl font-bold mb-4 text-[#0097b2] dark:text-[#38bdf8]">Редактировать врача</h2>
             <form id="editDoctorForm" class="space-y-4">
                 <input type="hidden" id="editDoctorId" />
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Имя</label>
-                    <input id="editDoctorName" type="text" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
+                    <input id="editDoctorName" type="text"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Специализация</label>
-                    <input id="editDoctorSpecialty" type="text" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
+                    <input id="editDoctorSpecialty" type="text"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Опыт</label>
-                    <input id="editDoctorExperience" type="number" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
+                    <input id="editDoctorExperience" type="number"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Образование</label>
-                    <input id="editDoctorEducation" type="text" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
+                    <input id="editDoctorEducation" type="text"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">График</label>
-                    <input id="editDoctorSchedule" type="text" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
+                    <input id="editDoctorSchedule" type="text"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white" />
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Описание</label>
-                    <textarea id="editDoctorBio" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white"></textarea>
+                    <textarea id="editDoctorBio"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white"></textarea>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium dark:text-gray-300">Фото</label>
-                    <input id="editDoctorPhoto" type="file" accept="image/*" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#0097b2] dark:file:bg-[#38bdf8] file:text-white hover:file:bg-[#007a94] dark:hover:file:bg-[#0ea5e9]" />
+                    <input id="editDoctorPhoto" type="file" accept="image/*"
+                        class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 dark:bg-gray-700 dark:text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#0097b2] dark:file:bg-[#38bdf8] file:text-white hover:file:bg-[#007a94] dark:hover:file:bg-[#0ea5e9]" />
                 </div>
 
                 <div class="flex justify-center flex-col md:flex-row gap-2">
-                    <button type="button" id="closeEditModal" class="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors">Отмена</button>
-                    <button type="submit" class="px-4 py-2 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded hover:bg-[#007a94] dark:hover:bg-[#0ea5e9] transition-colors">Сохранить</button>
+                    <button type="button" id="closeEditModal"
+                        class="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-white rounded hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors">Отмена</button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded hover:bg-[#007a94] dark:hover:bg-[#0ea5e9] transition-colors">Сохранить</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
+    <div id="alertPanel" class="fixed inset-0 flex items-center justify-center bg-black/40 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-80 text-center">
+            <div id="alertIcon" class="mb-3 text-3xl text-green-500 hidden">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p id="alertMessage" class="text-gray-700 dark:text-gray-200 mb-4">
+                Сообщение
+            </p>
+            <button id="alertOkBtn"
+                class="px-4 py-2 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded-md hover:opacity-90">
+                Окей
+            </button>
+        </div>
+    </div>
+
+
+    <footer
+        class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
                 <div class="p-4 ">
                     <a href="/homePage.html" class="flex items-center">
                         <img src="img/icons/pawIcon.png" alt=" " class="h-12 w-auto">
                     </a>
-                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь
+                        лучше и здоровее</p>
                 </div>
                 <div class="p-4">
                     <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
@@ -260,7 +302,8 @@
                     </ul>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:
+                    </h4>
                     <p class="flex gap-2 justify-center items-center text-black dark:text-white">
                         <i class="fas fa-clock mt-1"></i>
                         Пн–Вс: 10:00-20:00
@@ -275,10 +318,11 @@
     </footer>
 
     <script type="module" src="scrips/theme.js"></script>
-    <script type="module" src="scrips/doctors/viewDoctors.js"></script>        
-    <script type="module" src="scrips/doctors/updateDoctor.js"></script>    
-    <script type="module" src="scrips/doctors/searchDoctor.js"></script>    
+    <script type="module" src="scrips/doctors/viewDoctors.js"></script>
+    <script type="module" src="scrips/doctors/updateDoctor.js"></script>
+    <script type="module" src="scrips/doctors/searchDoctor.js"></script>
     <script type="module" src="./scrips/burger.js"></script>
     <script type="module" src="./scrips/auth.js"></script>
 </body>
+
 </html>

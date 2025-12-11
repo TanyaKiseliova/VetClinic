@@ -1,3 +1,4 @@
+import { showPanel } from "./messages.js";
 
 const authBtn = document.getElementById("authBtn");
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -17,7 +18,7 @@ authBtn.addEventListener("click", () => {
 
   if (user) {
     localStorage.removeItem("currentUser");
-    alert("Вы вышли из системы");
+    showPanel("Вы вышли из системы");
   } 
 
 });

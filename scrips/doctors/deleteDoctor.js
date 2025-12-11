@@ -19,7 +19,7 @@ closeDeleteModal.addEventListener("click", () => {
 confirmDeleteBtn.addEventListener("click", async () => {
   if (doctorToDelete) {
     await Doctor.deleteDoctor(doctorToDelete.id);
-    alert("Доктор удалён!");
+    showPanel("Доктор удалён!");
     deleteModal.classList.add("hidden");
     loadDoctors();
   }

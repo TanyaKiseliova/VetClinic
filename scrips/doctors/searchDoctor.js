@@ -1,6 +1,7 @@
 import {showDoctors} from "./viewDoctors.js"
+import { Doctor } from "./doctor.js";
 
-let allDoctors = [];
+ let allDoctors = await Doctor.getDoctors();
 
 function filterCards() {
   const search = document.getElementById("searchInput").value.toLowerCase().trim();

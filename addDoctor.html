@@ -17,7 +17,8 @@
 
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-   <header class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
+    <header
+        class="fixed z-50 top-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46]">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16 ">
 
@@ -30,7 +31,8 @@
                 </button>
 
 
-                <nav id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
+                <nav id="mobileMenu"
+                    class="hidden md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] flex flex-col items-center p-4 space-y-4">
                     <button class="theme-toggle"
                         class="p-2 bg-white/20 dark:bg-gray-800/50 rounded-full hover:bg-white/30 transition-colors">
                         <img src="img/icons/sunIcon.png" class="h-9 w-auto">
@@ -39,10 +41,11 @@
                     <a href="/aboutPage.html" class="block dark:text-white ">О нас</a>
                     <a href="/servicesPage.html" class="block dark:text-white ">Услуги</a>
                     <a href="/doctorsPage.html" class="block dark:text-white ">Врачи</a>
+                    <a href="/clinicMap.html" class="block dark:text-white "> Карта </a>
                     <a href="/logIn.html" id="authBtnMobile" class="block dark:text-white">Вход</a>
                 </nav>
 
-                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8" >
+                <div id="fullSizeMenu" class="hidden md:flex md:items-center md:justify-between md:w-full md:ml-8">
 
                     <div class="flex items-center space-x-6 mx-auto">
 
@@ -91,18 +94,21 @@
     <section class="pt-24 pb-16 dark:bg-gray-800 transition-colors duration-300">
         <div class="container mx-auto px-4 max-w-[1100px]">
             <div class="mb-8">
-                <a href="/doctorsPage.html" class="text-[#0097b2] dark:text-[#38bdf8] hover:text-[#007a94] dark:hover:text-[#0ea5e9] font-semibold transition-colors inline-flex items-center gap-2">
+                <a href="/doctorsPage.html"
+                    class="text-[#0097b2] dark:text-[#38bdf8] hover:text-[#007a94] dark:hover:text-[#0ea5e9] font-semibold transition-colors inline-flex items-center gap-2">
                     <i class="fa-solid fa-arrow-left"></i>
                     Назад к списку врачей
                 </a>
             </div>
 
             <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-4">Добавить нового врача</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#0097b2] dark:text-[#38bdf8] mb-4">Добавить нового врача
+                </h1>
                 <p class="text-lg text-gray-600 dark:text-gray-300">Заполните информацию о новом специалисте</p>
             </div>
 
-            <div class="bg-[#0097b2]/20 dark:bg-gray-700/50 rounded-2xl p-8 shadow-xl dark:shadow-gray-900/50 transition-colors">
+            <div
+                class="bg-[#0097b2]/20 dark:bg-gray-700/50 rounded-2xl p-8 shadow-xl dark:shadow-gray-900/50 transition-colors">
                 <form id="doctorForm" class="space-y-8">
                     <div>
                         <label class="block text-gray-700 dark:text-gray-300 mb-3 font-semibold flex items-center">
@@ -162,9 +168,9 @@
                                 <i class="fas fa-camera text-[#0097b2] dark:text-[#38bdf8] mr-3 text-lg"></i>
                                 Фото врача
                             </label>
-                            <input id="doctorPhoto" 
-                                   class="w-full p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white file:mr-4 file:py-3 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#0097b2] dark:file:bg-[#38bdf8] file:text-white hover:file:bg-[#007a94] dark:hover:file:bg-[#0ea5e9] transition-colors" 
-                                   type="file" accept="image/*" name="pic">
+                            <input id="doctorPhoto"
+                                class="w-full p-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-800 dark:text-white file:mr-4 file:py-3 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#0097b2] dark:file:bg-[#38bdf8] file:text-white hover:file:bg-[#007a94] dark:hover:file:bg-[#0ea5e9] transition-colors"
+                                type="file" accept="image/*" name="pic">
                         </div>
 
                         <div>
@@ -198,14 +204,32 @@
         </div>
     </section>
 
-    <footer class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
+    <div id="alertPanel" class="fixed inset-0 flex items-center justify-center bg-black/40 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-80 text-center">
+            <div id="alertIcon" class="mb-3 text-3xl text-green-500 hidden">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p id="alertMessage" class="text-gray-700 dark:text-gray-200 mb-4">
+                Сообщение
+            </p>
+            <button id="alertOkBtn"
+                class="px-4 py-2 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded-md hover:opacity-90">
+                Окей
+            </button>
+        </div>
+    </div>
+
+
+    <footer
+        class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-[70px]">
                 <div class="p-4">
                     <a href="/homePage.html" class="flex items-center">
                         <img src="img/icons/pawIcon.png" alt="PetShelter" class="h-12 w-auto">
                     </a>
-                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь лучше и здоровее</p>
+                    <p class="text-lg py-4 text-black dark:text-white">Лечим Ваших домашних питомцев, делаем их жизнь
+                        лучше и здоровее</p>
                 </div>
                 <div class="p-4">
                     <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Контакты:</h4>
@@ -231,7 +255,8 @@
                     </ul>
                 </div>
                 <div class="p-4">
-                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:</h4>
+                    <h4 class="text-2xl font-medium flex justify-center py-2 text-black dark:text-white">Режим работы:
+                    </h4>
                     <p class="flex gap-2 justify-center items-center text-white">
                         <i class="fas fa-clock mt-1"></i>
                         Пн–Вс: 10:00-20:00
@@ -250,4 +275,5 @@
     <script type="module" src="./scrips/auth.js"></script>
     <script type="module" src="./scrips/burger.js"></script>
 </body>
+
 </html>

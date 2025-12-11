@@ -1,4 +1,5 @@
 import { supabase } from "../dbInfo.js";
+import { showPanel } from "../messages.js";
 import { Doctor } from "./doctor.js";
 import { loadDoctors } from "./viewDoctors.js";
 
@@ -62,7 +63,7 @@ editDoctorForm.addEventListener("submit", async (e) => {
 
   await Doctor.updateDoctor(id, updateData);
 
-  alert("Доктор обновлён!");
+  showPanel("Доктор обновлён!");
   editModal.classList.add("hidden");
   loadDoctors();
 });

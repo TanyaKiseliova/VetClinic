@@ -42,6 +42,7 @@
                     <a href="/aboutPage.html" class="block dark:text-white ">О нас</a>
                     <a href="/servicesPage.html" class="block dark:text-white ">Услуги</a>
                     <a href="/doctorsPage.html" class="block dark:text-white ">Врачи</a>
+                    <a href="/clinicMap.html" class="block dark:text-white "> Карта </a>
                     <a href="/logIn.html" id="authBtnMobile" class="block dark:text-white">Вход</a>
                 </nav>
 
@@ -331,7 +332,8 @@
                                         <i class="fa-solid fa-door-open"></i>
                                     </div>
                                 </foreignObject>
-                                 <text x="75" y="200" text-anchor="middle" font-size="12" fill="#6b7280" font-weight="bold"> Вход  </text>
+                                <text x="75" y="200" text-anchor="middle" font-size="12" fill="#6b7280"
+                                    font-weight="bold"> Вход </text>
                             </g>
 
                     </svg>
@@ -360,6 +362,22 @@
             </div>
         </div>
     </section>
+
+    <div id="alertPanel" class="fixed inset-0 flex items-center justify-center bg-black/40 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-80 text-center">
+            <div id="alertIcon" class="mb-3 text-3xl text-green-500 hidden">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <p id="alertMessage" class="text-gray-700 dark:text-gray-200 mb-4">
+                Сообщение
+            </p>
+            <button id="alertOkBtn"
+                class="px-4 py-2 bg-[#0097b2] dark:bg-[#38bdf8] text-white rounded-md hover:opacity-90">
+                Окей
+            </button>
+        </div>
+    </div>
+
 
     <footer
         class="min-h-[200px] bottom-0 left-0 right-0 bg-gradient-to-r from-[#0097b2] to-[#86c98b] dark:from-[#1e3a8a] dark:to-[#065f46] transition-colors duration-300">

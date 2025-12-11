@@ -1,11 +1,12 @@
 import { supabase } from "../dbInfo.js";
+import { showPanel } from "../messages.js";
 import { Doctor } from "./doctor.js";
 
 
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (!currentUser || (currentUser.role !== "admin" )) {
-  alert("Нет доступа к добавлению врачей.");
+  showPanel("Нет доступа к добавлению врачей.");
   window.location.href = "../login.html";
 }
 
@@ -45,7 +46,7 @@ class DoctorForm {
         .upload(fileName, file);
 
       if (uploadError) {
-        alert("Ошибка загрузки фото:", uploadError.message);
+        showPanel("Ошибка загрузки фото:", uploadError.message);
       } else {
         const { data: urlData } = supabase.storage
           .from("doctors")
@@ -68,7 +69,7 @@ class DoctorForm {
   }
 
   showSuccess() {
-    alert("✅ Доктор успешно добавлен!");
+   showPanel("✅ Доктор успешно добавлен!");
   }
 
   clearForm() {
