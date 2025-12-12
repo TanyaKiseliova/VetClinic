@@ -11,10 +11,7 @@ Tailwind and css, Supabase, Vercel, Leaflet
 
 ---
 
-## ✅ Features 🌟
-
-### 🔐 Authentication & Roles 
-- **role system** 
+### 🔐 Authentication
   - **All unauthorized users** can see all except add, updete and delete doctors 
   - **Admin** can Full CRUD operations on doctors and see full site 
 
@@ -27,7 +24,7 @@ Tailwind and css, Supabase, Vercel, Leaflet
 - **Map** with location of the shelter witch a custom icon
 - **Video** from YouTube to learn more about vet clinics
 
-### 👨🏻‍⚕️Doctor Management
+### 👨🏻‍⚕️Doctors
 - **Personal cards for each doctor** with photos and all necessary information 
 - **Search** doctors by their name and specialization
 
